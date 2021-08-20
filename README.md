@@ -4,6 +4,10 @@
 
 Bienvenidos a una pagina web que nos brinda la experiencia de sumergirnos en un mundo gamer en el cual podemos encontrar: juegos, accesorios , y todo tipo de hadwares para tu PC Gamer
 
+<img src="https://user-images.githubusercontent.com/88862208/130184652-3934d4c1-968a-442e-a98b-5da2cb8e84bd.png" width = 400 height= 200>
+
+
+
 ### Sitios de Referencia :
 📄 https://www.gamestop.com/
 
