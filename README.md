@@ -2,7 +2,7 @@
 
 ## Station Game 🎮
 
-Una pagina web que nos brinda la experiencia de sumergirnos en un mundo gamer en el cual podemos encontrar: juegos, accesorios , y todo tipo de hadwares para tu PC Gamer
+Bienvenidos a una pagina web que nos brinda la experiencia de sumergirnos en un mundo gamer en el cual podemos encontrar: juegos, accesorios , y todo tipo de hadwares para tu PC Gamer
 
 ### Sitios de Referencia :
 📄 https://www.gamestop.com/
@@ -15,7 +15,7 @@ Una pagina web que nos brinda la experiencia de sumergirnos en un mundo gamer en
 
 📄 https://computacion.mercadolibre.com.ar/computacion/tienda-gamer
 
-Integrantes 🧑‍💻 :
+### Integrantes 🧑‍💻 :
 
 ⚫ Joaquin Abal :   Tengo 23 años. Soy una persona tranquila con ganas de aprender a full .
              
