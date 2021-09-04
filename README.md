@@ -32,7 +32,7 @@ Queremos basarnos en cómo muestra los productos desde la raíz, ya que muestra 
 📄 https://www.youtube.com/
 Pensamos utilizar el mecanismo del menu desplegable de la izquierda(hamburger), en el cual por defecto muestra íconos referentes a las categorías, y al expandirlos muestra el detalle de los mismos.  
 
-
+#### 🔲 Trello: https://trello.com/b/6REzGRLi/grupo11stationgame
 
 #### Integrantes 🧑‍💻 :
 
