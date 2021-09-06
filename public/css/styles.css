@@ -1,0 +1,29 @@
+* {
+    box-sizing: content-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Montserrat', sans-serif;
+    border: solid 1px gray;
+}
+
+header {
+    background-color: #a4c3b2;
+    height: 50px;
+}
+
+header div {
+    display: inline; /* Esto es para que los divs del header se muestren uno al lado del otro */
+}
+
+.letras-logo {
+    width: 35px;
+    height: auto;
+    padding-bottom: 7px;
+    padding-left: 7px;
+}
+
+.imagen-logo {
+    width: 40px;
+    height: auto;
+    padding-top: 5px;
+}
