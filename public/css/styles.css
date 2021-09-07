@@ -11,9 +11,15 @@
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: sticky;
     top: 0;
+}
+
+.logos{
+   display: flex;
+   align-items: center;
+   justify-content: left; 
 }
 
 .logo-letras {
