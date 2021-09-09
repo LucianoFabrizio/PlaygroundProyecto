@@ -55,11 +55,11 @@
 }
 
 .footer {
-    position:absolute;
+    position:relative;
     bottom:0;
     width:100%;
     height:30px;
-    background:#080808;
+    background:red;
     font-size: 10px;
 }
 
@@ -97,4 +97,65 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+/* Inicio del Login */
+
+main article ul{
+     list-style-type: none;
+     font-size: 1rem;
+     line-height: 1.5rem;
+     
+}
+main article ul li{
+    padding: 5px;
+}
+
+main article{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: content-box;
+    border: 3px solid black;
+    width: 70%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    margin: 10% 12% 10% 15%;
+    padding-bottom: 15%;
+    padding-right: 5%;
+}
+h3 {
+    margin: 5%;
+    font-size: 1rem;
+    color: black;
+}
+main article ul label{
+    font-size: 0.7rem
+}
+main article ul input{
+    width: 120%;
+    display: flex;
+    overflow: auto;
+    color: black;
+}
+#registrarse{
+    justify-content: space-around;
+    display: flex;
+    margin-top: 10%;
+    font-size: 1rem;
+    color: black;
+    background-color: red;
+    width: 120%;
+}
+#crear-cuenta{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+}
+.logos-google-facebook {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
 }
