@@ -101,17 +101,17 @@
 
 /* Inicio del Login */
 
-main article ul{
+main form{
      list-style-type: none;
      font-size: 1rem;
      line-height: 1.5rem;
      
 }
-main article ul li{
+main form{
     padding: 5px;
 }
 
-main article{
+main form {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -130,11 +130,15 @@ h3 {
     font-size: 1rem;
     color: black;
 }
-main article ul label{
-    font-size: 0.7rem
+main form label{
+    font-size: 0.7rem;
+    padding: 1%;
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
 }
-main article ul input{
-    width: 120%;
+main form input{
+    width: 80%;
     display: flex;
     overflow: auto;
     color: black;
@@ -146,7 +150,7 @@ main article ul input{
     font-size: 1rem;
     color: black;
     background-color: red;
-    width: 120%;
+    width: 70%;
 }
 #crear-cuenta{
     display: flex;
