@@ -20,6 +20,8 @@ main {
     min-height: 550px;
 }
 
+/* HEADER */
+
 .logos{
    display: flex;
    align-items: center;
@@ -58,6 +60,8 @@ main {
     margin-right: 10px;
 }
 
+/* BANNER */
+
 .banner {
     display: flex;
     justify-content: space-between;
@@ -91,6 +95,8 @@ main {
     background-image: "../img/xbox-banner.jpg"
 }
 
+/* INDEX */
+
 .lista-de-productos {
     display: flex;
     margin: 30px 10px;
@@ -102,8 +108,27 @@ main {
 }
 .producto img {
     width: 200px;
-
 }
+
+.imagen-producto {
+    width: 90%;
+}
+
+/* PRODUCT PAGE */
+
+.galeria-imagenes {
+    display: flex;
+}
+
+.imagen-galeria {
+    width: 200px;
+}
+
+.descripcion {
+    margin: 20px;
+}
+
+/* FOOTER */
 
 .footer {
     position:relative;
