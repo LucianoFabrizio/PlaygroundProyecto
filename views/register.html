@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  
+
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class='logos'> <a href='#'> <img src="img/letrasLogo.png" alt="Logo" class="logo-letras"></a>
+                <a href='#'> <img src="img/dpad.png" alt="Logo" class="logo-imagen"></a>
+            </div>
+            <div class="barra-busqueda">
+                <p>Buscar</p></a>
+            </div>
+            <div class='r-icons'><a href="#"> <img src="img/usuario.png" alt="Logo" class="usuario"></a>
+                <a href="/productCart"> <img src="img/carrito.png" alt="Logo" class="carrito"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <form method="GET" action="/">
+            <h3>Crear nuevo usuario</h3>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="user_name">
+
+
+            <label for="email">Correo electrónico:</label>
+            
+            <input type="email" id="mail" name="user_mail">
+
+
+            <label for="password">Contraseña:</label>
+            
+            <input type="password" id="pass" name="user_pass">
+
+
+            <label for="password">Repetir contraseña:</label>
+            
+            <input type="password" id="pass" name="user_pass">
+
+            <button id="registrarse" action="submit">Registrarse</button>
+            <P id="crear-cuenta">Crear cuenta con:</P>
+            <div class="logos-google-facebook">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook-square"></i>
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>Texto de tipo legal. Todos los derechos reservados, etc, etc, etc. Copyright 2021</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
