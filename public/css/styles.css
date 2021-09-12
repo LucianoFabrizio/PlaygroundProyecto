@@ -134,8 +134,7 @@ main {
     height: 50%;
     width: 50%;
     border: 1px rgba(0,0,0,.5) solid;
-    
-}
+    }
 
 .masmenos {
     display: flex;
