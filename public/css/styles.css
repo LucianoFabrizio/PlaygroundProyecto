@@ -128,6 +128,36 @@ main {
     margin: 20px;
 }
 
+.control-botones {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.botones {
+    padding: 10px;
+    margin: 5px;
+    background-color: #cce3de;
+    border: none;  
+}
+
+.botones:hover {
+    background-color: #a4c3b2;
+}
+
+.botones:active {
+    background-color: #595959;
+}
+
+.especificaciones {
+    margin: 20px 60px 20px 60px;
+    font-size: 12px;
+}
+
+.especificaciones li {
+    list-style-type: none;
+}
+
 /* FOOTER */
 
 .footer {
