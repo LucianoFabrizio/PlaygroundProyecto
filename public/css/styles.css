@@ -175,6 +175,9 @@ main {
     font-size: 10px;
 }
 
+
+    /* PRODUCT-CART */
+
 .box-cant {
     display: flex;
 }
@@ -210,6 +213,15 @@ main {
     border: 1px grey solid;
     margin: 2px;
     margin: auto;
+    background-color: rgba(164,195,178,0.4);
+}
+
+#cuerpo-prod-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px grey;
+    padding: 4px;
 }
 
 .text-prod {
@@ -218,17 +230,47 @@ main {
     justify-content: space-around;
     padding-left: 5px;
     font-size: 0.8rem;
+    
 }
 
 #cantbar {
     all: unset;
-}
+}   
 
 
 #mi-carrito {
     padding-bottom: 10px;
     padding-top: 5px;
 }  
+
+.subtotal {
+    font-size: 1.2rem;
+}
+
+#resumen-compra {
+    border: 1px black solid;
+    padding: 3px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    
+    
+}
+
+
+.prods-resumen {
+    font-size: .9rem;
+    display: flex;
+
+}
+
+
+
+
+
 /* Inicio del Login */
 
 main form{

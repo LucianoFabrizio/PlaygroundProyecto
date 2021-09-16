@@ -26,9 +26,10 @@
 
 
     <main>
-        <div>
+        
             <h2 id='mi-carrito'>MI CARRITO</h2>
-          <div class='cart-box'>
+            <div id='cuerpo-prod-cart'>
+            <div class='cart-box'>
                 <img src='img/ps5-product.jpg' alt='imagen-prod' class='img-prod' >
                 
                 <div class='text-prod'>
@@ -43,31 +44,68 @@
                             <option value='3'>3</option>
                             <option value='4'>4</option>
                             <option value='5'>5</option>
-                        </select><br>
-                   
-                
-                
-                
-                
-                
-                
-                
+                        </select><br>       
                 </form>
-                <!-- <div class='box-cant'>
-                    <p class='cantidad'>1</p>
-                    <div class='masmenos'>
-                    <i class="far fa-plus-square"></i>
-                    <i class="fas fa-minus-square"></i>
-                </div>
-                </div> -->
-                <p>Sub Total</p>
+                <p class='subtotal'>Sub Total: $150000</p>
                 </div>  
         </div>
-          <div>
+        
 
-          </div>
+        <div class='cart-box'>
+            <img src='img/switch-product.jpg' alt='imagen-prod' class='img-prod' >
+            
+            <div class='text-prod'>
+            <p>NINTENDO <br> Nintendo Switch</p>
+            <p>Precio: $125000</p>
+
+            <form id='cantbar' action="/" method="GET">
+                <label for='category'>Cantidad</label>
+                <select name='category'>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                    </select><br>       
+            </form>
+            <p class='subtotal'>Sub Total: $125000</p>
+            </div>  
+    </div>
+
+        
+
+
+    
+        <h4>Resumen de Compra</h4>
+        <div id='resumen-compra'>
+        <div id='prod-name-group'>
+        <p class='prods-name'>prod 1</p>
+        <p class='prods-name'>prod 2</p>
+        <p class='prods-name'>prod 3</p>
+        <p class='prods-name'>prod 4</p>
+    </div>
+        <div>
+        <p>...........................................................</p>
+        <p>...........................................................</p>
+        <p>...........................................................</p>
+        <p>...........................................................</p>
+
         </div>
+    
+        <div id='prod-price-group'>
+        <p class='prods-price'>$111111</p>
+        <p class='prods-price'>$111111</p>
+        <p class='prods-price'>$111111</p>
+        <p class='prods-price'>$111111</p>
+    </div>
 
+    
+
+
+
+    </div>
+
+</div>
 
     </main>
     
