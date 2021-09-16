@@ -97,9 +97,14 @@ main {
 
 /* INDEX */
 
+.productos {
+    margin-left: 10px;
+}
+
 .lista-de-productos {
     display: flex;
     margin: 30px 10px;
+    overflow: auto;
 }
 
 .producto {
@@ -118,6 +123,7 @@ main {
 
 .galeria-imagenes {
     display: flex;
+    overflow: auto;
 }
 
 .imagen-galeria {
@@ -287,3 +293,12 @@ main form input{
     justify-content: space-evenly;
     padding: 20px;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+    .playstation h2 {
+        font-size: 20px; /* Si no no entra en el boton  */
+    }
+  }
+
