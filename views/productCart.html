@@ -48,6 +48,8 @@
                 </form>
                 <p class='subtotal'>Sub Total: $150000</p>
                 </div>  
+
+                <p class="x-borrar">X</p>
         </div>
         
 
@@ -70,13 +72,14 @@
             </form>
             <p class='subtotal'>Sub Total: $125000</p>
             </div>  
+            <p class="x-borrar">X</p>
     </div>
 
         
-
+    
 
     
-        <h4>Resumen de Compra</h4>
+        <h4 id='resumen'>Resumen de Compra</h4>
         <div id='resumen-compra'>
         <div id='prod-name-group'>
         <p class='prods-name'>prod 1</p>
@@ -85,10 +88,10 @@
         <p class='prods-name'>prod 4</p>
     </div>
         <div>
-        <p>...........................................................</p>
-        <p>...........................................................</p>
-        <p>...........................................................</p>
-        <p>...........................................................</p>
+        <p>..................................................</p>
+        <p>..................................................</p>
+        <p>..................................................</p>
+        <p>..................................................</p>
 
         </div>
     
@@ -97,15 +100,32 @@
         <p class='prods-price'>$111111</p>
         <p class='prods-price'>$111111</p>
         <p class='prods-price'>$111111</p>
-    </div>
-
-    
-
-
-
+    </div>      
+</div>
+      <div id='total'>TOTAL: $999999</div> 
     </div>
 
 </div>
+<h5 id='method-title'>Elige tu método de pago:</h5><br>
+<div id=pay>
+<form class='payment' action='/' method='GET'>
+<label for='visa'><i class="fab fa-cc-visa"></i>
+    <input type="radio" name='pay-method' id='visa' value='visa'>
+<label for='mastercard'><i class="fab fa-cc-mastercard"></i></label>
+    <input type="radio" name='pay-method' id='mastercard' value='mastercard'>
+<label for='amex'><i class="fab fa-cc-amex"></i></label>
+    <input type="radio" name='pay-method' id='amex' value='amex'>
+    <br>
+    <div id='cart-buttonbox'>
+<button type='reset' class='cart-button'>BORRAR CARRITO</button>
+<button type="submit" class='cart-button'>CONTINUAR</button>
+    </div>  
+</form>
+</div>
+
+
+
+
 
     </main>
     

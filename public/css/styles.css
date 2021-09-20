@@ -186,7 +186,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border: solid gray 1px;
     padding: 1.75px;
     padding-right: 20px;
@@ -241,10 +241,11 @@ main {
 #mi-carrito {
     padding-bottom: 10px;
     padding-top: 5px;
+    padding-left: 5px;
 }  
 
 .subtotal {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 #resumen-compra {
@@ -256,19 +257,75 @@ main {
     flex-direction: row;
     justify-content: space-around;
     width: 80%;
-    
-    
 }
 
+#resumen {
+    padding-top: 10px;
+}
 
 .prods-resumen {
     font-size: .9rem;
     display: flex;
+}
 
+.x-borrar {
+    padding: 5px;
+
+    font-weight: bolder;
+    
+}
+
+.x-borrar:hover {
+    color: red;
+    opacity: .5;
+    
+}
+
+#total {
+ padding-top: 5px;
+ font-size: larger;
+ font-weight: bold;
+}
+
+#pay{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    bottom: 20px;
+ 
+}
+
+#method-title{
+    all: revert;
+    display: flex;
+    margin: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+main div form input {
+all: revert;
 }
 
 
+main div form label {
+    all: revert;
+    }
+    
 
+.payment{
+    all: revert;
+}
+
+#cart-buttonbox{
+padding-top: 20px;
+}
+
+.cart-button{
+    padding: 2px;
+}
 
 
 /* Inicio del Login */
