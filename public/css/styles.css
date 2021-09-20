@@ -158,8 +158,15 @@ main form input{
     font-size: 1rem;
 }
 .logos-google-facebook {
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
+}
+
+#forgot-pasword{
+    font-size: 10px;
+    width: 80%;
+    text-align: end;
+    color:blue
 }
