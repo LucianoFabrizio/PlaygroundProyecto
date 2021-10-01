@@ -1,29 +1,16 @@
 const express = require('express');
-const path = require('path')
 const app = express();
-const publicPath = path.resolve(__dirname, './public')
+const PORT = process.env.PORT || 3000;
+const mainRouter = require("./routers/main")
 
-app.use(express.static(publicPath));
+app.set("views engine", "ejs")
 
-app.listen(3000, () => {
-  console.log(`El servidor está corriento en http://localhost:3000/`)
-})
+app.listen(PORT, () => {
+  console.log(`El servidor está corriento en http://localhost:3000/`)})
+app.use(express.static("public"));
 
-app.get ('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/index.html'));
-})
+app.use("/", mainRouter);
 
-app.get ('/productCart', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './views/productCart.html'));
-})
 
-app.get ("/register", (req,res) => {
-  res.sendFile(path.resolve(__dirname, './views/register.html'));
-})
 
-app.get ("/login", (req,res) => {
-  res.sendFile(path.resolve(__dirname, './views/login.html'));
-})
-app.get ("/productPage", (req,res) => {
-  res.sendFile(path.resolve(__dirname, './views/productPage.html'));
-})
+

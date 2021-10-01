@@ -4,6 +4,7 @@
   "description": "Somos STATION GAME,\r Una tienda online que se especializa en venta de productos del mundo gamer.\r La misma se divide en tres grandes categorías:\r PLAYSTATION - XBOX - NINTENDO\r Dependiendo por donde se quiera sumergir el usuario, STATION GAME brindará una experiencia personalizada basada en la elección.",
   "main": "app.js",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   },
   "scripts": {
