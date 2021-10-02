@@ -393,20 +393,9 @@ main form input{
     padding: 20px;
 }
 
-<<<<<<< HEAD
 #forgot-pasword{
     font-size: 10px;
     width: 80%;
     text-align: end;
     color:blue
 }
-=======
-/* MEDIA QUERIES */
-
-@media (max-width: 480px) {
-    .playstation h2 {
-        font-size: 20px; /* Si no no entra en el boton  */
-    }
-  }
-
->>>>>>> fe27ce4944c2e4ab45fe8021546677e8f2cac8ba
