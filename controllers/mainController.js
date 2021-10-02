@@ -16,8 +16,8 @@ const controlador = {
     productPage:(req,res) => {
    res.render(path.resolve(__dirname, '../views/productPage.ejs'));
 },
-productPage:(req,res) => {
-    res.render(path.resolve(__dirname, '../views/productPage.ejs'));
+    createProd:(req,res) => {
+    res.render(path.resolve(__dirname, '../views/createProd.ejs'));
  },
 }        
 
