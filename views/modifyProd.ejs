@@ -24,10 +24,12 @@
 
             <h3>Modificar producto existente:</h3>
             <label for="prodSelect">Seleccionar producto:</label>
-            <input type="text" id="prodSelect" name="prodSelect">
-                <option value=
+            <select id='prodSelect' name='prodSelect'>
+                <% listaProd.forEach(producto => { %>
+                 <option value= <%=producto.id%>><%=producto.prod_name%></option>
+                <% }) %>
 
-            <label for="marca">Marca:</label>
+            <!-- <label for="marca">Marca:</label>
             <select id="marca" name="marca">
               <option value="playstation">Play-Station</option>  
               <option value="xbox">Xbox</option>   
@@ -55,7 +57,7 @@
 
             <button id="agregarProd" action="submit">Agregar</button>
             <button id='reiniciarProd'action='reset'>Borrar</button>
-            </div>
+            </div> -->
 
         </form>
     </main>

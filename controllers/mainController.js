@@ -40,6 +40,9 @@ const controlador = {
     createProd:(req,res) => {
     res.render(path.resolve(__dirname, '../views/createProd.ejs'));
  },
+ modifyProd:(req,res) => {
+    res.render(path.resolve(__dirname, '../views/modifyProd.ejs'), {listaProd: listaProd});
+ }
 }        
 
 

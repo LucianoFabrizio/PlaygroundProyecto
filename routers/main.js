@@ -8,5 +8,6 @@ router.get("/register",controlador.register)
 router.get("/login",controlador.login)
 router.get("/productPage",controlador.productPage)
 router.get("/createProd",controlador.createProd)
+router.get("/modifyProd",controlador.modifyProd)
 
 module.exports = router
