@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Modificar Producto</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,10 +26,13 @@
             <label for="prodSelect">Seleccionar producto:</label>
             <select id='prodSelect' name='prodSelect'>
                 <% listaProd.forEach(producto => { %>
-                 <option value= <%=producto.id%>><%=producto.prod_name%></option>
-                <% }) %>
+                 <option value= <%=produc   to.id%>><%=producto.prod_name%></option>
+                <% }) %> <br>
 
-            <!-- <label for="marca">Marca:</label>
+             <label for="name">Nombre:</label><!-- no se ve en el formulario -->
+            <input type="text" id="name" name="prod_name">
+
+            <label for="marca">Marca:</label>
             <select id="marca" name="marca">
               <option value="playstation">Play-Station</option>  
               <option value="xbox">Xbox</option>   
@@ -55,9 +58,8 @@
             <label for ='descripcion'>Descripción</label>
             <textarea name="descripcion" rows="10" cols="30"></textarea>    
 
-            <button id="agregarProd" action="submit">Agregar</button>
+            <button id="agregarProd" action="submit">Modificar</button>
             <button id='reiniciarProd'action='reset'>Borrar</button>
-            </div> -->
 
         </form>
     </main>
