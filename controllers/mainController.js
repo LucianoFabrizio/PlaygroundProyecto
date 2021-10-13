@@ -3,11 +3,12 @@ const path = require("path")
 const listaProd = [
     { 
         id: 1,
-        prod_name: "PlayStation 5" ,
+        name: "PlayStation 5" ,
         marca: "PlayStation",
         tipoProd: "Consola",
         imgProd: "../public/img/ps5-product.jpg",
         precio: 150000,
+        stock: 11,
         descripcion: "lorem ipsum"
     },
     { 

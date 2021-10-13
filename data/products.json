@@ -1,0 +1,20 @@
+[{
+    "id": "0",
+    "name": "PlayStation 5",
+    "marca": "Playstation",
+    "tipoProd": "Consola",
+    "image": "C:/Users/Barri/Documents/DIGITAL HOUSE/grupo_11_StationGame/public/img/ps5-product.jpg",
+    "precio": "150000",
+    "stock": "5",
+    "descripcion": "mansa play 5 crack"
+  },
+  {
+    "id": "1",
+    "name": "Nintendo Switch",
+    "marca": "Nintendo",
+    "tipoProd": "Consola",
+    "image": "C:/Users/Barri/Documents/DIGITAL HOUSE/grupo_11_StationGame/public/img/switch-product.jpg",
+    "precio": "125000",
+    "stock": "3",
+    "descripcion": "nazi switcharda titan"
+  }]
