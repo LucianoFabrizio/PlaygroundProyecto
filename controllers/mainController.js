@@ -1,8 +1,22 @@
+const fs = require('fs');
 const path = require("path")
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const consolas = products.filter(function(product){
+	return product.tipoProd == 'Consola'
+})
+const juegos = products.filter(function(product){
+	return product.tipoProd == 'Juego'
+})
 
 const controlador = {
     index : (req, res) => {
-    res.render(path.resolve(__dirname, '../views/index.ejs'))
+        res.render('index', {
+			consolas,
+			juegos,
+		});
     },
     productCart : (req, res) => {
     res.render(path.resolve(__dirname, '../views/productCart.ejs'));
