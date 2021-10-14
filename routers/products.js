@@ -3,24 +3,23 @@ const router = express.Router();
 
 const productsController = require('../controllers/productsController');
 
-// Mostrar todos los productos
+// Listado de productos
 router.get('/', productsController.index); 
 
-// Creat producto
+// Crear producto
 router.get('/create', productsController.create); 
-router.post('/', productsController.store); 
 
-
-// Mostrar producto
+// Detalle de un producto particular
 router.get('/detail/:id', productsController.detail); 
 
-// Editar producto
-router.get('/edit/:id', productsController.edit); 
-router.patch('/edit/:id', productsController.update); 
+//Acción de creación (a donde se envía el formulario)
+router.post('/', productsController.store); 
 
+// Formulario de edición de productos
+router.get('/:id/edit', productsController.edit); 
 
-// Borrar producto
-router.delete('/delete/:id', productsController.destroy); 
+// Acción de borrado
+router.delete('/:id', productsController.destroy); 
 
 
 module.exports = router;
