@@ -1,27 +1,5 @@
 const path = require("path")
 
-const listaProd = [
-    { 
-        id: 1,
-        name: "PlayStation 5" ,
-        marca: "PlayStation",
-        tipoProd: "Consola",
-        imgProd: "../public/img/ps5-product.jpg",
-        precio: 150000,
-        stock: 11,
-        descripcion: "lorem ipsum"
-    },
-    { 
-        id: 1,
-        prod_name: "Nintendo Switch" ,
-        marca: "Nintendo",
-        tipoProd: "Consola",
-        imgProd: "../public/img/switch-product.jpg",
-        precio: 125000,
-        descripcion: "lorem ipsum"
-    }
-]
-
 const controlador = {
     index : (req, res) => {
     res.render(path.resolve(__dirname, '../views/index.ejs'))
