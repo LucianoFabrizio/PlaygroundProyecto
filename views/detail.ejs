@@ -10,7 +10,7 @@
         <!-- Banner -->
         <%- include ("./partials/banner") %>
 
-        <h1><a href="/products/detail/<%= product.id %>"><%= product.name %></a></h1>
+        <h1><a href="/products/<%= product.id %>"><%= product.name %></a></h1>
         <h3><%= product.descripcion %></h3>
         <img src="../img/<%= product.image %>" alt="" class="imagen-producto">
         <div class="control-botones">

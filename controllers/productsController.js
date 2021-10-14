@@ -39,7 +39,6 @@ const controller = {
 		let newProduct = {
 			id: products[products.length - 1].id + 1,
 			...req.body,
-			image: 'default-image.png'
 		};
 		products.push(newProduct)
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
@@ -49,12 +48,32 @@ const controller = {
 	// Formulario de edición de productos
 	edit: (req, res) => {
 		let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
-		res.render('product-edit', {productToEdit})
+		let product = products.find(product => product.id == id)
+		res.render('product-edit', {product})
 	},
+	// Acción de edición (a donde se envía el formulario):
+	update: (req, res) => {
+		let id = req.params.id;
+		let productToEdit = products.find(product => product.id == id)
 
+		productToEdit = {
+			id: productToEdit.id,
+			...req.body,
+			image: productToEdit.image,
+		};
+		
+		let newProducts = products.map(product => {
+			if (product.id == productToEdit.id) {
+				return product = {...productToEdit};
+			}
+			return product;
+		})
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+		res.redirect('/');
+	},
 	// Acción de borrado
-	destroy : (req, res) => {
+	delete : (req, res) => {
 		let id = req.params.id;
 		let finalProducts = products.filter(product => product.id != id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));

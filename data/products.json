@@ -27,5 +27,25 @@
     "precio": "10000",
     "stock": "3",
     "descripcion": "nice switcharda titan"
+  },
+  {
+    "id": "3",
+    "name": "Mario Kart 8 Deluxe",
+    "marca": "Nintendo",
+    "tipoProd": "Juego",
+    "image": "mario_kart.jpg",
+    "precio": "10000",
+    "stock": "3",
+    "descripcion": "nice switcharda titan"
+  },
+  {
+    "id": "4",
+    "name": "Mario Kart 8 Deluxe",
+    "marca": "Nintendo",
+    "tipoProd": "Juego",
+    "image": "mario_kart.jpg",
+    "precio": "10000",
+    "stock": "3",
+    "descripcion": "nice switcharda titan"
   }
 ]

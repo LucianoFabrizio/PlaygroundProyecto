@@ -12,12 +12,10 @@
         
             <form method="GET" action="/">
 
-            <h3>Modificar producto existente:</h3>
-            <label for="prodSelect">Seleccionar producto:</label>
-            <select id='prodSelect' name='prodSelect'>
+            <h3>Modificar producto existente: <%= product.name %></h3>
 
-             <label for="name">Nombre:</label><!-- no se ve en el formulario -->
-            <input type="text" id="name" name="prod_name">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="prod_name" value="<%= product.name %>">
 
             <label for="marca">Marca:</label>
             <select id="marca" name="marca">
@@ -40,13 +38,17 @@
                      accept="image/png, image/jpeg">
 
             <label for="precio">Precio:</label>
-            <input type="number" id="precio" name="precio">
+            <input type="number" id="precio" name="precio" value="<%= product.price %>">
 
             <label for ='descripcion'>Descripción</label>
-            <textarea name="descripcion" rows="10" cols="30"></textarea>    
+            <textarea name="descripcion" rows="10" cols="30" ><%= product.descripcion %></textarea>    
 
             <button id="agregarProd" action="submit">Modificar</button>
             <button id='reiniciarProd'action='reset'>Borrar</button>
+
+            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="action-button delete">ELIMINAR</button>
+            </form>
 
         </form>
 
