@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-  
-
-</head>
-
+    <!-- Head -->
+    <%- include ("./partials/head") %>
 <body>
-    <header>
-        <%- include ("./partials/header") %>
-    </header>
+    <!-- Header -->
+    <%- include ("./partials/header") %>
 
     <main>
-        <form method="POST" action="/">
+        <!-- Banner -->
+        <%- include ("./partials/banner") %>
+        
+            <form method="GET" action="/">
 
-            <h3>Modificar Producto</h3>
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name">
+            <h3>Crear producto</h3>
+
+            <label for="name">Nombre:</label><!-- no se ve en el formulario -->
+            <input type="text" id="name" name="prod_name">
 
             <label for="marca">Marca:</label>
             <select id="marca" name="marca">
               <option value="playstation">Play-Station</option>  
               <option value="xbox">Xbox</option>   
               <option value="nintendo">Nintendo</option>
+              <option value="varios">Otro</option>
             </select>  
 
             <label for="tipoProd">Tipo de Producto:</label>
@@ -48,23 +40,16 @@
             <label for="precio">Precio:</label>
             <input type="number" id="precio" name="precio">
 
-            <label for="stock">Stock:</label>
-            <input type="number" id="stock" name="stock">
-            
             <label for ='descripcion'>Descripción</label>
             <textarea name="descripcion" rows="10" cols="30"></textarea>    
 
-            <button id="agregarProd" action="submit">Agregar</button>
+            <button id="agregarProd" action="submit">Modificar</button>
             <button id='reiniciarProd'action='reset'>Borrar</button>
-            </div>
 
         </form>
-    </main>
 
-    <footer>
-        <%- include ("./partials/footer") %>
-    </footer>
-
+    <!-- Footer -->
+    <%- include ("./partials/footer") %>
+    
 </body>
-
 </html>

@@ -4,13 +4,21 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const consolas = products.filter(function(product){
+	return product.tipoProd == 'Consola'
+})
+const juegos = products.filter(function(product){
+	return product.tipoProd == 'Juego'
+})
+
 const controller = {
 	// Listado de productos
-	index: (req, res) => {
-		res.render('products', {
-			products
-		})
-	},
+	index : (req, res) => {
+        res.render('products', {
+			consolas,
+			juegos,
+		});
+    },
 
 	// Detalle de un producto particular
 	detail: (req, res) => {
@@ -23,7 +31,7 @@ const controller = {
 
 	// Formulario de creación de productos
 	create: (req, res) => {
-		res.render('product-create-form')
+		res.render('product-create')
 	},
 	
 	// Acción de creación (a donde se envía el formulario)
@@ -42,7 +50,7 @@ const controller = {
 	edit: (req, res) => {
 		let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
-		res.render('product-edit-form', {productToEdit})
+		res.render('product-edit', {productToEdit})
 	},
 
 	// Acción de borrado

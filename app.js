@@ -6,7 +6,8 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.set("views engine", "ejs")
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(methodOverride('_method'));
 
 app.set('view engine', 'ejs'); // Define que el motor que utilizamos es EJS

@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage - SG</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
-  
-</head>
+    <!-- Head -->
+    <%- include ("./partials/head") %>
 <body>
-    <header>
-        <%- include ("./partials/header") %>
-    </header>
-
+    <!-- Header -->
+    <%- include ("./partials/header") %>
 
     <main>
-        <h1>Playstation 5</h1>
-        <h3>Lo último en rendimiento o alguna descripción del estilo</h3>
-        <img src="img/ps5-product.jpg" alt="" class="imagen-producto">
+        <!-- Banner -->
+        <%- include ("./partials/banner") %>
+
+        <h1><a href="/products/detail/<%= product.id %>"><%= product.name %></a></h1>
+        <h3><%= product.descripcion %></h3>
+        <img src="../img/<%= product.image %>" alt="" class="imagen-producto">
         <div class="control-botones">
             <button type="button" class="botones">Agregar al carrito</button>
             <button type="button" class="botones">Comprar ahora</button>
@@ -48,11 +40,11 @@
                 <li>Caract 8</li>
             </ul>
         </section>
+
     </main>
-    
-    <footer>
-        <%- include ("./partials/footer") %>
-    </footer>
+
+    <!-- Footer -->
+    <%- include ("./partials/footer") %>
     
 </body>
 </html>
