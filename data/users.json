@@ -1,0 +1,15 @@
+[{
+    "id": "0",
+    "name": "Juan",
+    "lastName": "Peréz",
+    "mail": "juanperez@stationgame.com",
+    "password": "password"
+  },
+  {
+    "id": "1",
+    "name": "Juana",
+    "lastName": "Peréz",
+    "mail": "juanaperez@stationgame.com",
+    "password": "password"
+  }
+]
