@@ -22,7 +22,7 @@ const controlador = {
         res.render('login');
     },
     register :(req, res) => {
-        res.render('login');
+        res.render('register');
     },
     cart :(req, res) => {
         res.render('cart');
