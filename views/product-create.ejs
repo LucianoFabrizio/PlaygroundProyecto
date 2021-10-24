@@ -10,12 +10,12 @@
         <!-- Banner -->
         <%- include ("./partials/banner") %>
         
-            <form method="POST" action="/products" enctype=multipart/form-data>
+            <form action="/products" method="POST">
 
             <h3>Crear producto</h3>
 
             <label for="name">Nombre:</label><!-- no se ve en el formulario -->
-            <input type="text" id="name" name="prod_name">
+            <input type="text" id="name" name="name">
 
             <label for="marca">Marca:</label>
             <select id="marca" name="marca">
@@ -41,7 +41,7 @@
             <input type="number" id="precio" name="precio">
 
             <label for ='descripcion'>Descripción</label>
-            <textarea name="descripcion" rows="10" cols="30"></textarea>    
+            <textarea name="descripcion" id="descripcion" rows="10" cols="30"></textarea>    
 
             <button id="agregarProd" action="submit">Crear</button>
             <button id='reiniciarProd'action='reset'>Borrar</button>

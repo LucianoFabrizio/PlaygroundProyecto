@@ -48,5 +48,13 @@
   "precio": "10000",
   "stock": "3",
   "descripcion": "nice switcharda titan"
+ },
+ {
+  "name": "Test",
+  "marca": "playstation",
+  "tipoProd": "juego",
+  "imgProd": "",
+  "precio": "",
+  "descripcion": "TEst"
  }
 ]
