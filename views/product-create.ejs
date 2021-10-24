@@ -10,7 +10,7 @@
         <!-- Banner -->
         <%- include ("./partials/banner") %>
         
-            <form method="POST" action="/">
+            <form method="POST" action="/products" enctype=multipart/form-data>
 
             <h3>Crear producto</h3>
 
@@ -43,7 +43,7 @@
             <label for ='descripcion'>Descripción</label>
             <textarea name="descripcion" rows="10" cols="30"></textarea>    
 
-            <button id="agregarProd" action="submit">Modificar</button>
+            <button id="agregarProd" action="submit">Crear</button>
             <button id='reiniciarProd'action='reset'>Borrar</button>
 
         </form>

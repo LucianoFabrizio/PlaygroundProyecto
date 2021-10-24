@@ -20,7 +20,7 @@ app.use("/", mainRouter);
 app.use("/products", productRouter);
 
 app.listen(PORT, () => {
-  console.log(`El servidor está corriento en http://localhost:3000/`)})
+  console.log(`El servidor está corriento en http://localhost:` + PORT)})
 app.use(express.static("public"));
 
 

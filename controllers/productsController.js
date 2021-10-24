@@ -37,7 +37,6 @@ const controller = {
 	// Acción de creación (a donde se envía el formulario)
 	store: (req, res) => {
 		let newProduct = {
-			id: products[products.length - 1].id + 1,
 			...req.body,
 		};
 		products.push(newProduct)

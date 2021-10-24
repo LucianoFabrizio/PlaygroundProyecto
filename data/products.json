@@ -1,51 +1,52 @@
-[{
-    "id": "0",
-    "name": "PlayStation 5",
-    "marca": "Playstation",
-    "tipoProd": "Consola",
-    "image": "ps5-product.jpg",
-    "precio": "150000",
-    "stock": "5",
-    "descripcion": "mansa play 5 crack"
-  },
-  {
-    "id": "1",
-    "name": "Nintendo Switch",
-    "marca": "Nintendo",
-    "tipoProd": "Consola",
-    "image": "switch-product.jpg",
-    "precio": "125000",
-    "stock": "3",
-    "descripcion": "nice switcharda titan"
-  },
-  {
-    "id": "2",
-    "name": "Mario Kart 8 Deluxe",
-    "marca": "Nintendo",
-    "tipoProd": "Juego",
-    "image": "mario_kart.jpg",
-    "precio": "10000",
-    "stock": "3",
-    "descripcion": "nice switcharda titan"
-  },
-  {
-    "id": "3",
-    "name": "Mario Kart 8 Deluxe",
-    "marca": "Nintendo",
-    "tipoProd": "Juego",
-    "image": "mario_kart.jpg",
-    "precio": "10000",
-    "stock": "3",
-    "descripcion": "nice switcharda titan"
-  },
-  {
-    "id": "4",
-    "name": "Mario Kart 8 Deluxe",
-    "marca": "Nintendo",
-    "tipoProd": "Juego",
-    "image": "mario_kart.jpg",
-    "precio": "10000",
-    "stock": "3",
-    "descripcion": "nice switcharda titan"
-  }
+[
+ {
+  "id": "0",
+  "name": "PlayStation 5",
+  "marca": "Playstation",
+  "tipoProd": "Consola",
+  "image": "ps5-product.jpg",
+  "precio": "150000",
+  "stock": "5",
+  "descripcion": "mansa play 5 crack"
+ },
+ {
+  "id": "1",
+  "name": "Nintendo Switch",
+  "marca": "Nintendo",
+  "tipoProd": "Consola",
+  "image": "switch-product.jpg",
+  "precio": "125000",
+  "stock": "3",
+  "descripcion": "nice switcharda titan"
+ },
+ {
+  "id": "2",
+  "name": "Mario Kart 8 Deluxe",
+  "marca": "Nintendo",
+  "tipoProd": "Juego",
+  "image": "mario_kart.jpg",
+  "precio": "10000",
+  "stock": "3",
+  "descripcion": "nice switcharda titan"
+ },
+ {
+  "id": "3",
+  "name": "Mario Kart 8 Deluxe",
+  "marca": "Nintendo",
+  "tipoProd": "Juego",
+  "image": "mario_kart.jpg",
+  "precio": "10000",
+  "stock": "3",
+  "descripcion": "nice switcharda titan"
+ },
+ {
+  "id": "4",
+  "name": "Mario Kart 8 Deluxe",
+  "marca": "Nintendo",
+  "tipoProd": "Juego",
+  "image": "mario_kart.jpg",
+  "precio": "10000",
+  "stock": "3",
+  "descripcion": "nice switcharda titan"
+ }
 ]
