@@ -19,7 +19,7 @@
                 <% consolas.forEach(function(product){ %>
                     <div class="producto">
                         <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
-                        <img src="../img/<%= product.image %>" alt="">
+                        <img src="../img/uploads/<%= product.image %>" alt="">
                         <p><%= product.descripcion %></p>
                     </div>
                 <% }) %>
@@ -32,7 +32,7 @@
                 <% juegos.forEach(function(product){ %>
                     <div class="producto">
                         <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
-                        <img src="../img/<%= product.image %>" alt="">
+                        <img src="../img/uploads/<%= product.image %>" alt="">
                         <p><%= product.descripcion %></p>
                     </div>
                 <% }) %>

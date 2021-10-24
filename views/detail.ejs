@@ -12,10 +12,17 @@
 
         <h1><a href="/products/<%= product.id %>"><%= product.name %></a></h1>
         <h3><%= product.descripcion %></h3>
-        <img src="../img/<%= product.image %>" alt="" class="imagen-producto">
+        <img src="../img/uploads/<%= product.image %>" alt="" class="imagen-producto">
         <div class="control-botones">
             <button type="button" class="botones">Agregar al carrito</button>
             <button type="button" class="botones">Comprar ahora</button>
+            <a href="/products/<%= product.id %>/edit" class="botones">EDITAR PRODUCTO</a>
+        </div>
+        <div>
+            
+                <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="action-button delete">ELIMINAR</button>
+                </form>
         </div>
         <h3>De nuevo, algo de marketing, despues busco en la pag oficial</h3>
         <div class="galeria-imagenes">
