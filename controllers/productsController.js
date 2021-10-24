@@ -5,10 +5,10 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const consolas = products.filter(function(product){
-	return product.tipoProd == 'Consola'
+	return product.tipoProd == 'consola'
 })
 const juegos = products.filter(function(product){
-	return product.tipoProd == 'Juego'
+	return product.tipoProd == 'juego'
 })
 
 const controller = {
@@ -36,10 +36,12 @@ const controller = {
 	
 	// Acción de creación (a donde se envía el formulario)
 	store: (req, res) => {
+		console.log(req.file);
 		let newProduct = {
+			id: Date.now(),
+			image: req.file.filename,
 			...req.body,
 		};
-		console.log(req.body);
 		products.push(newProduct)
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		res.redirect('/');

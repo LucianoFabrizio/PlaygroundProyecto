@@ -5,10 +5,10 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const consolas = products.filter(function(product){
-	return product.tipoProd == 'Consola'
+	return product.tipoProd == 'consola'
 })
 const juegos = products.filter(function(product){
-	return product.tipoProd == 'Juego'
+	return product.tipoProd == 'juego'
 })
 
 const controlador = {
