@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+    <%- include ("./partials/head") %>
+<body>
+    <!-- Header -->
+    <%- include ("./partials/header") %>
+
+    <main>
+        <!-- Banner -->
+        <%- include ("./partials/banner") %>
+
+        <h1><a href="/products/<%= product.id %>"><%= product.name %></a></h1>
+        <h3><%= product.descripcion %></h3>
+        <img src="../img/uploads/<%= product.image %>" alt="" class="imagen-producto">
+        <div class="control-botones">
+            <button type="button" class="botones">Agregar al carrito</button>
+            <button type="button" class="botones">Comprar ahora</button>
+            <a href="/products/<%= product.id %>/edit" class="botones">EDITAR PRODUCTO</a>
+        </div>
+        <div>
+            
+                <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="action-button delete">ELIMINAR</button>
+                </form>
+        </div>
+        <h3>De nuevo, algo de marketing, despues busco en la pag oficial</h3>
+        <div class="galeria-imagenes">
+            <img src="img/ps5-product.jpg" alt="" class="imagen-galeria">
+            <img src="img/ps5-auriculares.jpg" alt="" class="imagen-galeria">
+            <img src="img/ps5-controller.jpg" alt="" class="imagen-galeria">
+            <img src="img/ps5-banner.jpg" alt="" class="imagen-galeria">
+        </div>
+        <section class="descripcion">
+            <p>Descipción: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat incidunt harum, odit, temporibus assumenda quidem, obcaecati amet debitis iusto eveniet illum minus. In expedita illum nobis eligendi accusamus iste. Cupiditate?</p>
+        </section>
+        <section class="especificaciones">
+            <h3>Especificaciones:</h3>
+            <ul>
+                <li>Caract 1</li>
+                <li>Caract 2</li>
+                <li>Caract 3</li>
+                <li>Caract 4</li>
+                <li>Caract 5</li>
+                <li>Caract 6</li>
+                <li>Caract 7</li>
+                <li>Caract 8</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <%- include ("./partials/footer") %>
+    
+</body>
+</html>

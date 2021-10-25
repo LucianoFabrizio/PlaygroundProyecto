@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+    <%- include ("./partials/head") %>
+<body>
+    <!-- Header -->
+    <%- include ("./partials/header") %>
+
+    <main>
+        <!-- Banner -->
+        <%- include ("./partials/banner") %>
+        
+            <form method="GET" action="/">
+
+            <h3>Modificar producto existente: <%= product.name %></h3>
+
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="prod_name" value="<%= product.name %>">
+
+            <label for="marca">Marca:</label>
+            <select id="marca" name="marca">
+              <option value="playstation">Play-Station</option>  
+              <option value="xbox">Xbox</option>   
+              <option value="nintendo">Nintendo</option>
+              <option value="varios">Otro</option>
+            </select>  
+
+            <label for="tipoProd">Tipo de Producto:</label>
+            <select id="tipoProd" name="tipoProd">
+                <option value="juego">Juego</option>  
+                <option value="consola">Consola</option>   
+                <option value="accesorio">Accesorio</option>
+              </select>  
+
+              <label for="imgProd">Imagen del Producto:</label>
+              <input type="file"
+                     id="imgProd" name="imgProd"
+                     accept="image/png, image/jpeg">
+
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" value="<%= product.price %>">
+
+            <label for ='descripcion'>Descripción</label>
+            <textarea name="descripcion" rows="10" cols="30" ><%= product.descripcion %></textarea>    
+
+            <button id="agregarProd" action="submit">Modificar</button>
+            <button id='reiniciarProd'action='reset'>Borrar</button>
+
+            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="action-button delete">ELIMINAR</button>
+            </form>
+
+        </form>
+
+    <!-- Footer -->
+    <%- include ("./partials/footer") %>
+    
+</body>
+</html>

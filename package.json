@@ -1,0 +1,26 @@
+{
+  "name": "grupo_11_stationgame",
+  "version": "1.0.0",
+  "description": "Somos STATION GAME,\r Una tienda online que se especializa en venta de productos del mundo gamer.\r La misma se divide en tres grandes categorías:\r PLAYSTATION - XBOX - NINTENDO\r Dependiendo por donde se quiera sumergir el usuario, STATION GAME brindará una experiencia personalizada basada en la elección.",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.3"
+  },
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucianoFabrizio/grupo_11_StationGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucianoFabrizio/grupo_11_StationGame/issues"
+  },
+  "homepage": "https://github.com/LucianoFabrizio/grupo_11_StationGame#readme",
+  "keywords": []
+}

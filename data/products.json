@@ -1,0 +1,52 @@
+[
+ {
+  "id": 1635113777567,
+  "name": "PlayStation 5",
+  "marca": "Playstation",
+  "tipoProd": "consola",
+  "image": "ps5-product.jpg",
+  "precio": "150000",
+  "stock": "5",
+  "descripcion": "mansa play 5 crack"
+ },
+ {
+  "id": 1635113777456,
+  "name": "Nintendo Switch",
+  "marca": "Nintendo",
+  "tipoProd": "consola",
+  "image": "switch-product.jpg",
+  "precio": "125000",
+  "stock": "3",
+  "descripcion": "nice switcharda titan"
+ },
+ {
+  "id": 1635113777623,
+  "name": "Mario Kart 8 Deluxe",
+  "marca": "Nintendo",
+  "tipoProd": "juego",
+  "image": "mario_kart.jpg",
+  "precio": "10000",
+  "stock": "3",
+  "descripcion": "nice switcharda titan"
+ },
+ {
+  "id": 1635113777615,
+  "name": "Mario Kart 8 Deluxe",
+  "marca": "Nintendo",
+  "tipoProd": "juego",
+  "image": "mario_kart.jpg",
+  "precio": "10000",
+  "stock": "3",
+  "descripcion": "nice switcharda titan"
+ },
+ {
+  "id": 1635113777613,
+  "name": "Mario Kart 8 Deluxe",
+  "marca": "Nintendo",
+  "tipoProd": "juego",
+  "image": "mario_kart.jpg",
+  "precio": "10000",
+  "stock": "3",
+  "descripcion": "nice switcharda titan"
+ }
+]

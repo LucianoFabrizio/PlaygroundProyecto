@@ -1,0 +1,401 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    background-color: #a4c3b2;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+main {
+    min-height: 550px;
+}
+
+/* HEADER */
+
+.logos{
+   display: flex;
+   align-items: center;
+   justify-content: left; 
+}
+
+.logo-letras {
+    width: auto;
+    height: 25px;
+    margin-left: 10px;
+}
+
+.logo-imagen {
+    width: auto;
+    height: 40px;
+    margin-left: 5px;
+    margin-right: auto;
+}
+
+.barra-busqueda {
+    width: 40%;
+    height: 20px;
+    background-color: white;
+}
+
+.usuario {
+    width: auto;
+    height: 30px;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.carrito {
+    width: auto;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* BANNER */
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin: 10px auto;
+    border: 1px black solid;
+    
+}
+
+.xbox {
+    background-color: #107C10;
+    height: 100%;
+    width: 33.333333%;
+    align-self: center;
+    /* background-image: "../img/xbox-banner.jpg" Ya voy a ver como hago andar esto */
+}
+
+.playstation {
+    background-color: #006FCD;
+    height: 100%;
+    width: 33.333333%;
+    align-self: center;
+    background-image: "../img/xbox-banner.jpg"
+}
+
+.switch {
+    background-color: #E70009;
+    height: 100%;
+    width: 33.333333%;
+    align-self: center;
+    background-image: "../img/xbox-banner.jpg"
+}
+
+/* INDEX */
+
+.productos {
+    margin-left: 10px;
+}
+
+.lista-de-productos {
+    display: flex;
+    margin: 30px 10px;
+    overflow: auto;
+}
+
+.producto {
+    border: grey 1px solid;
+    margin: 10px;
+}
+.producto img {
+    width: 200px;
+}
+
+.imagen-producto {
+    width: 90%;
+}
+
+/* PRODUCT PAGE */
+
+.galeria-imagenes {
+    display: flex;
+    overflow: auto;
+}
+
+.imagen-galeria {
+    width: 200px;
+}
+
+.descripcion {
+    margin: 20px;
+}
+
+.control-botones {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.botones {
+    padding: 10px;
+    margin: 5px;
+    background-color: #cce3de;
+    border: none;  
+}
+
+.botones:hover {
+    background-color: #a4c3b2;
+}
+
+.botones:active {
+    background-color: #595959;
+}
+
+.especificaciones {
+    margin: 20px 60px 20px 60px;
+    font-size: 12px;
+}
+
+.especificaciones li {
+    list-style-type: none;
+}
+
+/* FOOTER */
+
+.footer {
+    position:relative;
+    bottom:0;
+    width:100%;
+    height:30px;
+    background:#a4c3b2;
+    font-size: 10px;
+}
+
+
+    /* PRODUCT-CART */
+
+.box-cant {
+    display: flex;
+}
+
+.cantidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    border: solid gray 1px;
+    padding: 1.75px;
+    padding-right: 20px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.img-prod {
+    height: 50%;
+    width: 50%;
+    border: 1px rgba(0,0,0,.5) solid;
+    }
+
+.masmenos {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-box {
+    display: flex;   
+    box-shadow: grey;
+    box-sizing: border-box;
+    width: 70%;
+    border: 1px grey solid;
+    margin: 2px;
+    margin: auto;
+    background-color: rgba(164,195,178,0.4);
+}
+
+#cuerpo-prod-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px grey;
+    padding: 4px;
+}
+
+.text-prod {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5px;
+    font-size: 0.8rem;
+    
+}
+
+#cantbar {
+    all: unset;
+}   
+
+
+#mi-carrito {
+    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+}  
+
+.subtotal {
+    font-size: 1rem;
+}
+
+#resumen-compra {
+    border: 1px black solid;
+    padding: 3px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+}
+
+#resumen {
+    padding-top: 10px;
+}
+
+.prods-resumen {
+    font-size: .9rem;
+    display: flex;
+}
+
+.x-borrar {
+    padding: 5px;
+
+    font-weight: bolder;
+    
+}
+
+.x-borrar:hover {
+    color: red;
+    opacity: .5;
+    
+}
+
+#total {
+ padding-top: 5px;
+ font-size: larger;
+ font-weight: bold;
+}
+
+#pay{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    bottom: 20px;
+ 
+}
+
+#method-title{
+    all: revert;
+    display: flex;
+    margin: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+main div form input {
+all: revert;
+}
+
+
+main div form label {
+    all: revert;
+    }
+    
+
+.payment{
+    all: revert;
+}
+
+#cart-buttonbox{
+padding-top: 20px;
+}
+
+.cart-button{
+    padding: 2px;
+}
+
+
+/* Inicio del Login */
+
+main form{
+     list-style-type: none;
+     font-size: 1rem;
+     line-height: 1.5rem;
+     
+}
+main form{
+    padding: 5px;
+}
+
+main form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: content-box;
+    border: 3px solid black;
+    width: 70%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    margin: 10% 12% 10% 15%;
+    padding-bottom: 15%;
+    padding-right: 5%;
+}
+h3 {
+    margin: 5%;
+    font-size: 1rem;
+    color: black;
+}
+main form label{
+    font-size: 0.7rem;
+    padding: 1%;
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+}
+main form input{
+    width: 80%;
+    display: flex;
+    overflow: auto;
+    color: black;
+}
+#registrarse{
+    justify-content: space-around;
+    display: flex;
+    margin-top: 10%;
+    font-size: 1rem;
+    color: black;
+    background-color: red;
+    width: 70%;
+}
+#crear-cuenta{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+}
+.logos-google-facebook {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+#forgot-pasword{
+    font-size: 10px;
+    width: 80%;
+    text-align: end;
+    color:blue
+}
