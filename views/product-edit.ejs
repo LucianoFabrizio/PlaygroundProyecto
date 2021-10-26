@@ -10,12 +10,12 @@
         <!-- Banner -->
         <%- include ("./partials/banner") %>
         
-            <form method="GET" action="/">
+            <form method="POST" action="/products/edit/<%= product.id %>?_method=PUT">
 
             <h3>Modificar producto existente: <%= product.name %></h3>
 
             <label for="name">Nombre:</label>
-            <input type="text" id="name" name="prod_name" value="<%= product.name %>">
+            <input type="text" id="name" name="name" value="<%= product.name %>">
 
             <label for="marca">Marca:</label>
             <select id="marca" name="marca">
@@ -34,8 +34,8 @@
 
               <label for="imgProd">Imagen del Producto:</label>
               <input type="file"
-                     id="imgProd" name="imgProd"
-                     accept="image/png, image/jpeg">
+                     id="imgProd" name="image"
+                     accept="image/png, image/jpe">
 
             <label for="precio">Precio:</label>
             <input type="number" id="precio" name="precio" value="<%= product.price %>">

@@ -57,16 +57,23 @@ const controller = {
 	update: (req, res) => {
 		let id = req.params.id;
 		let productToEdit = products.find(product => product.id == id)
+		let productoToEdited = {}
 
-		productToEdit = {
+		if (req.body.image == productToEdit.image) {
+		productToEdited = {
 			id: productToEdit.id,
 			...req.body,
 			image: productToEdit.image,
 		};
-		
+	} else {
+		productToEdited = {
+			id: productToEdit.id,
+			...req.body,	
+	}
+	}		
 		let newProducts = products.map(product => {
-			if (product.id == productToEdit.id) {
-				return product = {...productToEdit};
+			if (product.id == productToEdited.id) {
+				return product = productToEdited;
 			}
 			return product;
 		})
