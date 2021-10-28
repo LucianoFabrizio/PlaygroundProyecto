@@ -32,7 +32,7 @@ router.post('/', upload.single('imgProd'), productsController.store);
 router.get('/:id/edit', productsController.edit); 
 
 // Acción de edición de productos
-router.put('/edit/:id/', productsController.update); 
+router.put('/:id/edit', productsController.update); 
 
 // Acción de borrado
 router.delete('/:id', productsController.delete); 
