@@ -10,21 +10,17 @@
         <!-- Banner -->
         <%- include ("./partials/banner") %>
 
-        <h1><a href="/products/<%= product.id %>"><%= product.name %></a></h1>
-        <h3><%= product.descripcion %></h3>
+        <h1 class="titulo-producto"><a href="/products/<%= product.id %>"><%= product.name %></a></h1>
         <img src="../img/uploads/<%= product.image %>" alt="" class="imagen-producto">
         <div class="control-botones">
             <button type="button" class="botones">Agregar al carrito</button>
             <button type="button" class="botones">Comprar ahora</button>
             <a href="/products/<%= product.id %>/edit" class="botones">EDITAR PRODUCTO</a>
+            <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="botones">ELIMINAR</button>
+            </form>
         </div>
-        <div>
-            
-                <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
-                    <button type="submit" class="action-button delete">ELIMINAR</button>
-                </form>
-        </div>
-        <h3>De nuevo, algo de marketing, despues busco en la pag oficial</h3>
+        <h3 class="descripcion-corta"><%= product.descripcion %></h3>
         <div class="galeria-imagenes">
             <img src="img/ps5-product.jpg" alt="" class="imagen-galeria">
             <img src="img/ps5-auriculares.jpg" alt="" class="imagen-galeria">

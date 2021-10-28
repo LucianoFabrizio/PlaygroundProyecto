@@ -5,6 +5,12 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+main {
+    min-height: 550px;
+}
+
+/* HEADER */
+
 .header {
     background-color: #a4c3b2;
     width: 100%;
@@ -15,12 +21,6 @@
     position: sticky;
     top: 0;
 }
-
-main {
-    min-height: 550px;
-}
-
-/* HEADER */
 
 .logos{
    display: flex;
@@ -117,9 +117,14 @@ main {
 
 .imagen-producto {
     width: 90%;
+    max-width: 600px;
 }
 
 /* PRODUCT PAGE */
+
+.titulo-producto {
+    margin: 10px;
+}
 
 .galeria-imagenes {
     display: flex;
@@ -128,6 +133,12 @@ main {
 
 .imagen-galeria {
     width: 200px;
+}
+
+.descripcion-corta {
+    margin: 5%;
+    font-size: 1rem;
+    color: black;
 }
 
 .descripcion {
@@ -330,7 +341,7 @@ padding-top: 20px;
 
 /* Inicio del Login */
 
-main form{
+/* main form{
      list-style-type: none;
      font-size: 1rem;
      line-height: 1.5rem;
@@ -371,7 +382,7 @@ main form input{
     display: flex;
     overflow: auto;
     color: black;
-}
+} */
 #registrarse{
     justify-content: space-around;
     display: flex;
