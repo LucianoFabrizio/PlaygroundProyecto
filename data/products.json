@@ -6,7 +6,7 @@
   "tipoProd": "juego",
   "image": "",
   "precio": "1313131",
-  "descripcion": "Descipción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
+  "descripcion": "Descripción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
  },
  {
   "id": 1635113777456,
@@ -16,7 +16,7 @@
   "image": "switch-product.jpg",
   "precio": "125000",
   "stock": "3",
-  "descripcion": "Descipción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
+  "descripcion": "Descripción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
  },
  {
   "id": 1635113777623,
@@ -26,7 +26,7 @@
   "image": "mario_kart.jpg",
   "precio": "10000",
   "stock": "3",
-  "descripcion": "Descipción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
+  "descripcion": "Descripción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
  },
  {
   "id": 1635113777615,
@@ -36,7 +36,7 @@
   "image": "mario_kart.jpg",
   "precio": "10000",
   "stock": "3",
-  "descripcion": "Descipción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
+  "descripcion": "Descripción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
  },
  {
   "id": 1635113777613,
@@ -46,6 +46,6 @@
   "image": "mario_kart.jpg",
   "precio": "10000",
   "stock": "3",
-  "descripcion": "Descipción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
+  "descripcion": "Descripción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
  }
 ]

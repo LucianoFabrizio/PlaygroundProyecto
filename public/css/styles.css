@@ -110,20 +110,22 @@ main {
 .producto {
     border: grey 1px solid;
     margin: 10px;
+    max-width: 200px;
 }
 .producto img {
-    width: 200px;
-}
-
-.imagen-producto {
-    width: 90%;
-    max-width: 600px;
+    width: 100%;
+    align-content: center;
 }
 
 /* PRODUCT PAGE */
 
 .titulo-producto {
     margin: 10px;
+}
+
+.imagen-producto {
+    width: 90%;
+    max-width: 600px;
 }
 
 .galeria-imagenes {
@@ -341,17 +343,7 @@ padding-top: 20px;
 
 /* Inicio del Login */
 
-/* main form{
-     list-style-type: none;
-     font-size: 1rem;
-     line-height: 1.5rem;
-     
-}
-main form{
-    padding: 5px;
-}
-
-main form {
+.formulario {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -364,25 +356,12 @@ main form {
     margin: 10% 12% 10% 15%;
     padding-bottom: 15%;
     padding-right: 5%;
-}
-h3 {
-    margin: 5%;
+    list-style-type: none;
     font-size: 1rem;
-    color: black;
+    line-height: 1.5rem;
+    padding: 5px;
 }
-main form label{
-    font-size: 0.7rem;
-    padding: 1%;
-    display: flex;
-    justify-content: flex-start;
-    width: 80%;
-}
-main form input{
-    width: 80%;
-    display: flex;
-    overflow: auto;
-    color: black;
-} */
+
 #registrarse{
     justify-content: space-around;
     display: flex;
@@ -396,6 +375,7 @@ main form input{
     display: flex;
     justify-content: space-around;
     font-size: 1rem;
+    margin-top: 10px;
 }
 .logos-google-facebook {
     width: 100%;
