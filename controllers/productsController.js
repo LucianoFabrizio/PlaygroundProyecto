@@ -36,7 +36,6 @@ const controller = {
 	
 	// Acción de creación (a donde se envía el formulario)
 	store: (req, res) => {
-		console.log(req.file);
 		let newProduct = {
 			id: Date.now(),
 			image: req.file.filename,

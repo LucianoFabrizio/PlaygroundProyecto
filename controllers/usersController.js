@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
-
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'))
 
 const controller = {
@@ -11,9 +10,25 @@ const controller = {
         res.render('register');
     },
 
-    store: (req,res) => {
+    store: (req, res) => {
+		
+		let image = req.file != undefined ? req.file.filename : 'default.png';
+		
+		// if(req.file != undefined){
+		// 	image = req.file.filename
+		// } else {
+		// 	image = 'default.png'
+		// }
 
-    },
+		let newUser = {
+			id: Date.now(),
+			image: image,
+			...req.body,
+		};
+		users.push(newUser)
+		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+		res.redirect('/');
+	},
 
     login: (req,res) => {
         res.render('login');
