@@ -14,12 +14,8 @@ const controller = {
 		
 		let image = req.file != undefined ? req.file.filename : 'default.png';
 		
-		// if(req.file != undefined){
-		// 	image = req.file.filename
-		// } else {
-		// 	image = 'default.png'
-		// }
-
+		console.log(req.body);
+		
 		let newUser = {
 			id: Date.now(),
 			image: image,
