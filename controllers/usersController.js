@@ -1,9 +1,10 @@
 const { profile } = require('console');
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'))
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const controller = {
 
@@ -15,7 +16,10 @@ const controller = {
 		
 		let image = req.file != undefined ? req.file.filename : 'default.png';
 		
-		console.log(req.body);
+		// console.log(req.body);
+
+		const resultValidation = validationResult(req);
+		
 		
 		let newUser = {
 			id: Date.now(),
