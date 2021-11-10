@@ -21,7 +21,7 @@ const usersController = require('../controllers/usersController');
 router.get('/register', usersController.register); 
 
 // Acción de registro de usuario (a donde se envía el formulario)
-router.post('/', upload.single('imgProd'), usersController.store);
+router.post('/', upload.single('imgUser'), usersController.store);
 
 // Login usuario
 router.get('/login', usersController.login)
