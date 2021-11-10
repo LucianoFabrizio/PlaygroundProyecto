@@ -411,3 +411,8 @@ padding-top: 20px;
     text-align: end;
     color:blue
 }
+
+.text-danger {
+    color: red;
+    font-size: 0.8rem;
+}
