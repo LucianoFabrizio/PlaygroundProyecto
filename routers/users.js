@@ -3,6 +3,8 @@ const router = express.Router();
 const path = require('path');
 const multer = require('multer');
 
+const { body } = require('express-validator');
+
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, './public/img/uploads')
@@ -16,12 +18,20 @@ const storage = multer.diskStorage({
 const upload = multer({storage})
 
 const usersController = require('../controllers/usersController');
-  
+    
+const validations = [
+    body('name').notEmpty(),
+    body('mail').notEmpty(),
+    body('password').notEmpty()
+
+
+];
+
 // Registrar usuario
 router.get('/register', usersController.register); 
 
 // Acción de registro de usuario (a donde se envía el formulario)
-router.post('/', upload.single('imgUser'), usersController.store);
+router.post('/', upload.single('imgUser'), validations, usersController.store);
 
 // Login usuario
 router.get('/login', usersController.login)
