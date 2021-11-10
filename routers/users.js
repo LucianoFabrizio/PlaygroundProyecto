@@ -20,11 +20,9 @@ const upload = multer({storage})
 const usersController = require('../controllers/usersController');
     
 const validations = [
-    body('name').notEmpty(),
-    body('mail').notEmpty(),
-    body('password').notEmpty()
-
-
+    body('name').notEmpty().withMessage('Tienes que escribir un Nombre'),
+    body('mail').notEmpty().withMessage('Tienes que escribir un mail'),
+    body('password').notEmpty().withMessage('Tienes que escribir una contraseña')
 ];
 
 // Registrar usuario

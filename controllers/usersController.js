@@ -19,16 +19,22 @@ const controller = {
 		// console.log(req.body);
 
 		const resultValidation = validationResult(req);
-		
-		
+
 		let newUser = {
 			id: Date.now(),
 			image: image,
 			...req.body,
 		};
-		users.push(newUser)
+		users.push(newUser) 
 		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-		res.redirect('/');
+
+		
+		if (resultValidation.errors.length > 0) {
+			return res.render('register', 
+			{ errors: resultValidation.mapped()}
+			)	 
+		}
+		// res.redirect('/');
 	},
 
     login: (req,res) => {
