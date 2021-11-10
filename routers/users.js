@@ -8,7 +8,8 @@ const storage = multer.diskStorage({
         cb(null, 'public/img/uploads')
     },
     filename (req, file, cb) {
-        cb(null, Date.now() + path.extname(file.originalname))
+        let filename = `${Date.now()}_img${path.extname(file.filename)}`; 
+                cb(null, filename);
     }
 })
 
@@ -39,6 +40,5 @@ router.put('/:id', usersController.update)
 
 // Proceso de borrado
 router.delete('/:id', usersController.delete); 
-
 
 module.exports = router;

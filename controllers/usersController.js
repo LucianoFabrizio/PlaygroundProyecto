@@ -1,3 +1,4 @@
+const { profile } = require('console');
 const fs = require('fs');
 const path = require('path');
 
@@ -60,6 +61,9 @@ const controller = {
 		fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
 		res.redirect('/');
 	}
-}
+
+
+	}
+
 
 module.exports = controller
