@@ -20,6 +20,18 @@
     </header>
 
     <main>
+        <% if (locals.errors) { %>
+          
+            <% for ( let oneError in errors ) { %>
+                <p><%= errors[oneError].msg   %> </p>
+            
+            <% } %>
+
+        <% } %>
+
+        
+
+
         <form action="/users" method="POST" enctype="multipart/form-data" class="formulario">
             <h3>Crear nuevo usuario</h3>
             <label for="name">Nombre:</label>
