@@ -49,15 +49,6 @@
   "descripcion": "Descripción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
  },
  {
-  "id": 1636917052538,
-  "name": "EDITED",
-  "marca": "playstation",
-  "tipoProd": "juego",
-  "precio": "100000",
-  "descripcion": "EDITED",
-  "image": "mario_kart.jpg"
- },
- {
   "id": 1636917057265,
   "name": "Mario Kart 8 Deluxe",
   "marca": "Nintendo",
