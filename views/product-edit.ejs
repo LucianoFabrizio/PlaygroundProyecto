@@ -10,7 +10,7 @@
         <!-- Banner -->
         <%- include ("./partials/banner") %>
         
-            <form method="POST" action="/products/edit/<%= product.id %>?_method=PUT" class="formulario">
+            <form method="POST" action="/products/edit/<%= product.id %>" class="formulario" enctype="multipart/form-data">
 
             <h3>Modificar producto existente: <%= product.name %></h3>
 
@@ -44,10 +44,10 @@
             <textarea name="descripcion" rows="10" cols="30" ><%= product.descripcion %></textarea>    
 
             <button id="agregarProd" action="submit">Modificar</button>
-            <button id='reiniciarProd'action='reset'>Borrar</button>
+            <button id='reiniciarProd'action='reset'>Resetear formulario</button>
 
-            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-                <button type="submit" class="action-button delete">ELIMINAR</button>
+            <form method="POST" action="/products/delete/<%= product.id %>?_method=DELETE">
+                <button type="submit" class="action-button delete">ELIMINAR PRODUCTO</button>
             </form>
 
         </form>
