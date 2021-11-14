@@ -66,9 +66,34 @@ const controller = {
 		})
     },
     
-    update: (req,res) => {
+    update: (req, res) => {
+		let id = req.params.id;
+		let userToEdit = users.find(user => user.id == id)
+		let image
+		if(req.file != undefined){
+			image = req.file.filename
+		} else {
+			image = userToEdit.image
+		}
 
-    },
+		userToEdit = {
+			id: userToEdit.id,
+			...req.body,
+			image: image,
+		};
+
+		console.log(userToEdit);
+		
+		let newUsers = user.map(user => {
+			if (user.id == newUser.id) {
+				return user = {...newUser};
+			}
+			return user;
+		})
+
+		fs.writeFileSync(usersFilePath, JSON.stringify(newUsers, null, ' '));
+		res.redirect('/');
+	},
 
     delete : (req, res) => {
 		let id = req.params.id;
@@ -78,7 +103,7 @@ const controller = {
 	}
 
 
-	}
+}
 
 
 module.exports = controller

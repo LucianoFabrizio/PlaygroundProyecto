@@ -10,7 +10,7 @@
         <!-- Banner -->
         <%- include ("./partials/banner") %>
 
-        <form action="/users" method="POST" enctype="multipart/form-data" class="formulario">
+        <form method="POST" enctype="multipart/form-data" class="formulario">
             <h3>Editar informacion de <%= user.name %> </h3>
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" value=<%= user.name %>>
@@ -56,11 +56,8 @@
                 </div>
                <% } %>
 
-            <button id="registrarse" action="submit">Registrarse</button>
-            <p id="crear-cuenta">Crear cuenta con:</p>
-            <div class="logos-google-facebook">
-                <i class="fab fa-google"></i>
-                <i class="fab fa-facebook-square"></i>
+            <button id="registrarse" action="submit">Guardar</button>
+
             </div>
 
         </form>

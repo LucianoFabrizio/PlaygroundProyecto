@@ -50,11 +50,11 @@ router.get('/:id/edit', usersController.edit)
 // Detalle de usuario
 router.get('/:id', usersController.detail)
 
-// Formulario de edición de productos
+// Formulario de edición de usuarios
 router.get('/edit/:id', usersController.edit)
 
 // Proceso de Edición (a donde se envía el formulario)
-router.put('/:id', usersController.update)
+router.post('/edit/:id', upload.single('imgUser'), validations, usersController.store)
 
 // Proceso de borrado
 router.delete('/:id', usersController.delete); 
