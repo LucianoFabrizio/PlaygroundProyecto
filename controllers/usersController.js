@@ -62,7 +62,7 @@ const controller = {
         let id = req.params.id
 		let user = users.find(user => user.id == id)
 		res.render('user-edit', {
-			users
+			user
 		})
     },
     

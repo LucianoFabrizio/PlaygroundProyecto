@@ -50,6 +50,9 @@ router.get('/:id/edit', usersController.edit)
 // Detalle de usuario
 router.get('/:id', usersController.detail)
 
+// Formulario de edición de productos
+router.get('/edit/:id', usersController.edit)
+
 // Proceso de Edición (a donde se envía el formulario)
 router.put('/:id', usersController.update)
 

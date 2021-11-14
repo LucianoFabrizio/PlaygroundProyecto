@@ -10,6 +10,61 @@
         <!-- Banner -->
         <%- include ("./partials/banner") %>
 
+        <form action="/users" method="POST" enctype="multipart/form-data" class="formulario">
+            <h3>Editar informacion de <%= user.name %> </h3>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" value=<%= user.name %>>
+
+            <% if (locals.errors && errors.name) { %>
+             <div class='text-danger'>
+                <%= errors.name.msg   %> 
+             </div>
+            <% } %>
+
+
+
+            <label for="imgUser">Imagen de usuario:</label>
+              <input type="file"
+                     id="imgUser" name="imgUser"
+                     accept="image/png, image/jpeg">
+
+
+            <label for="mail">Correo electrónico:</label>
+            
+            <input type="email" id="mail" name="mail" value= <%= user.mail %>>
+            <% if (locals.errors && errors.mail) { %>
+                <div class='text-danger'>
+                   <%= errors.mail.msg   %> 
+                </div>
+               <% } %>
+
+            <label for="password">Contraseña:</label>
+            
+            <input type="password" id="password" name="password"  value="<%= locals.oldData ? oldData.password : null  %>">
+            <% if (locals.errors && errors.password) { %>
+                <div class='text-danger'>
+                   <%= errors.password.msg   %> 
+                </div>
+               <% } %>
+
+            <label for="password">Repetir contraseña:</label>
+            
+            <input type="password" id="password" name="password" value="<%= locals.oldData ? oldData.password : null  %>">
+            <% if (locals.errors && errors.password) { %>
+                <div class='text-danger'>
+                   <%= errors.password.msg   %> 
+                </div>
+               <% } %>
+
+            <button id="registrarse" action="submit">Registrarse</button>
+            <p id="crear-cuenta">Crear cuenta con:</p>
+            <div class="logos-google-facebook">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook-square"></i>
+            </div>
+
+        </form>
+
     </main>
 
     <!-- Footer -->

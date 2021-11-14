@@ -15,10 +15,7 @@
         <div class="control-botones">
             <button type="button" class="botones">Agregar al carrito</button>
             <button type="button" class="botones">Comprar ahora</button>
-            <a href="/products/<%= product.id %>/edit" class="botones">EDITAR PRODUCTO</a>
-            <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
-                <button type="submit" class="botones">ELIMINAR</button>
-            </form>
+            <a href="/products/edit/<%= product.id %>" class="botones">EDITAR PRODUCTO</a>
         </div>
         <h3 class="descripcion-corta"><%= product.descripcion %></h3>
         <div class="galeria-imagenes">

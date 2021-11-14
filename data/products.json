@@ -1,10 +1,10 @@
 [
  {
   "id": 1635113777567,
-  "name": "PlayStation 5dd",
+  "name": "PlayStation 5",
   "marca": "playstation",
   "tipoProd": "juego",
-  "image": "",
+  "image": "switch-product.jpg",
   "precio": "1313131",
   "descripcion": "Descripción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
  },
@@ -47,5 +47,33 @@
   "precio": "10000",
   "stock": "3",
   "descripcion": "Descripción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
+ },
+ {
+  "id": 1636917052538,
+  "name": "EDITED",
+  "marca": "playstation",
+  "tipoProd": "juego",
+  "precio": "100000",
+  "descripcion": "EDITED",
+  "image": "mario_kart.jpg"
+ },
+ {
+  "id": 1636917057265,
+  "name": "Mario Kart 8 Deluxe",
+  "marca": "Nintendo",
+  "tipoProd": "juego",
+  "image": "mario_kart.jpg",
+  "precio": "10000",
+  "stock": "3",
+  "descripcion": "Descripción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
+ },
+ {
+  "id": 1636919029092,
+  "name": "EDITAR",
+  "marca": "playstation",
+  "tipoProd": "juego",
+  "precio": "99999999999",
+  "descripcion": "EDITAR",
+  "image": "1636919029086.png"
  }
 ]

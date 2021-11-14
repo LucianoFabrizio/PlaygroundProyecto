@@ -15,7 +15,7 @@
                 <h2> Cuenta de <%= user.name %> </h2>
             </a>
             <img src="../img/uploads/users/<%= user.image %>" alt="" class="imagen-usuario">
-            <a href="/products/<%= user.id %>/edit" class="botones">EDITAR PERFIL</a>
+            <a href="/users/edit/<%= user.id %>" class="botones">EDITAR PERFIL</a>
             <form action="/users/<%= user.id %>?_method=DELETE" method="POST">
                 <button type="submit" class="botones">ELIMINAR</button>
             </form>

@@ -29,13 +29,13 @@ router.get('/:id', productsController.detail);
 router.post('/', upload.single('imgProd'), productsController.store); 
 
 // Formulario de edición de productos
-router.get('/:id/edit', productsController.edit); 
+router.get('/edit/:id', productsController.edit); 
 
 // Acción de edición de productos
-router.put('/:id/edit', productsController.update); 
+router.post('/edit/:id', upload.single('imgProd'), productsController.update); 
 
 // Acción de borrado
-router.delete('/:id', productsController.delete); 
+router.delete('/delete/:id', productsController.delete); 
 
 
 module.exports = router;

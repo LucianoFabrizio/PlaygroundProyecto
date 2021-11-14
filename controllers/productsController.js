@@ -56,23 +56,24 @@ const controller = {
 	update: (req, res) => {
 		let id = req.params.id;
 		let productToEdit = products.find(product => product.id == id)
-		let productoToEdited = {}
+		let image
+		if(req.file != undefined){
+			image = req.file.filename
+		} else {
+			image = productToEdit.image
+		}
 
-		if (req.body.image == productToEdit.image) {
-		productToEdited = {
+		productToEdit = {
 			id: productToEdit.id,
 			...req.body,
-			image: productToEdit.image,
+			image: image,
 		};
-	} else {
-		productToEdited = {
-			id: productToEdit.id,
-			...req.body,	
-	}
-	}		
+
+		console.log(productToEdit);
+		
 		let newProducts = products.map(product => {
-			if (product.id == productToEdited.id) {
-				return product = productToEdited;
+			if (product.id == productToEdit.id) {
+				return product = {...productToEdit};
 			}
 			return product;
 		})
