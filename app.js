@@ -19,7 +19,7 @@ app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la 
 
 const mainRouter = require("./routers/main")
 const productRouter = require("./routers/products")
-const usersRouter = require("./routers/users")
+const usersRouter = require("./routers/users") 
 
 app.use("/", mainRouter);
 app.use("/products", productRouter);

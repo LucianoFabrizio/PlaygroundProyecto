@@ -2,7 +2,7 @@ const { profile } = require('console');
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
-
+const bcrypt = require('bcryptjs');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
@@ -31,8 +31,10 @@ const controller = {
 			
 		let newUser = {
 			id: Date.now(),
-			image: image,
 			...req.body,
+			password: bcrypt.hashSync(req.body.password, 10),
+			image: image
+			
 		};
 		users.push(newUser) 
 		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
@@ -52,7 +54,7 @@ const controller = {
         let id = req.params.id
 		let user = users.find(user => user.id == id)
 		res.render('user-detail', {
-			user
+			user: user
 		})
     },
     

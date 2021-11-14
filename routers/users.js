@@ -22,7 +22,14 @@ const usersController = require('../controllers/usersController');
 const validations = [
     body('name').notEmpty().withMessage('Tienes que escribir un Nombre'),
     body('mail').notEmpty().withMessage('Tienes que escribir un mail'),
-    body('password' ).notEmpty().withMessage('Tienes que escribir una contraseña')
+    body('password<').notEmpty().withMessage('Tienes que escribir una contraseña'),
+    body('password').custom(() => {
+        if (req.body.password === req.body.Password2) {
+          return true;
+        } else {
+          return false;
+        }
+      }).withMessage('Tienes que escribir la misma contraseña en los dos campos')
 ];
 
 // Registrar usuario

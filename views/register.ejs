@@ -59,9 +59,9 @@
                 </div>
                <% } %>
 
-            <label for="password">Repetir contraseña:</label>
+            <label for="password2">Repetir contraseña:</label>
             
-            <input type="password" id="password" name="password" value="<%= locals.oldData ? oldData.password : null  %>">
+            <input type="password" id="password2" name="password2">
             <% if (locals.errors && errors.password) { %>
                 <div class='text-danger'>
                    <%= errors.password.msg   %> 
