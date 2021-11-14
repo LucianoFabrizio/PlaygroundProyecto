@@ -22,7 +22,7 @@ const usersController = require('../controllers/usersController');
 const validations = [
     body('name').notEmpty().withMessage('Tienes que escribir un Nombre'),
     body('mail').notEmpty().withMessage('Tienes que escribir un mail'),
-    body('password').notEmpty().withMessage('Tienes que escribir una contraseña')
+    body('password' ).notEmpty().withMessage('Tienes que escribir una contraseña')
 ];
 
 // Registrar usuario
@@ -38,7 +38,7 @@ router.get('/login', usersController.login)
 router.post('/', usersController.processLogin)
 
 // Edición/Borrar usuario
-router.get('/:id/edit', usersController.edit)
+router.get('/:id/edit', usersController.edit) 
 
 // Detalle de usuario
 router.get('/:id', usersController.detail)

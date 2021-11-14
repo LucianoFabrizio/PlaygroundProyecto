@@ -20,13 +20,6 @@ const controller = {
 
 		const resultValidation = validationResult(req);
 
-		let newUser = {
-			id: Date.now(),
-			image: image,
-			...req.body,
-		};
-		users.push(newUser) 
-		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
 
 		
 		if (resultValidation.errors.length > 0) {
@@ -34,7 +27,16 @@ const controller = {
 			{ errors: resultValidation.mapped(),
 			  oldData: req.body
 			})	 
-		}
+		} else {
+			
+		let newUser = {
+			id: Date.now(),
+			image: image,
+			...req.body,
+		};
+		users.push(newUser) 
+		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+		} 
 		// res.redirect('/');
 	},
 

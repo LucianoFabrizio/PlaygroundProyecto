@@ -14,25 +14,5 @@
   "mail": "juanperez@stationgame.com",
   "image": "default.png",
   "password": "password"
- },
- {
-  "id": 1636558788269,
-  "image": "default.png",
-  "name": "asd",
-  "mail": "",
-  "password": [
-   "",
-   ""
-  ]
- },
- {
-  "id": 1636559050982,
-  "image": "default.png",
-  "name": "asd",
-  "mail": "",
-  "password": [
-   "",
-   ""
-  ]
  }
 ]
