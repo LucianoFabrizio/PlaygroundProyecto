@@ -45,7 +45,7 @@
 
             <label for="mail">Correo electrónico:</label>
             
-            <input type="email" id="mail" name="mail">  value="<%= locals.oldData ? oldData.mail : null  %>"
+            <input type="email" id="mail" name="mail"  value="<%= locals.oldData ? oldData.mail : null  %>">
             <% if (locals.errors && errors.mail) { %>
                 <div class='text-danger'>
                    <%= errors.mail.msg   %> 
