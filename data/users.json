@@ -46,5 +46,13 @@
   "password": "$2a$10$0boXF1V7uEodK2IfvL8YbOsZX5pTyImik2Uh8QjOtrqVgoXHqCmoS",
   "password2": "aaa",
   "image": "default.png"
+ },
+ {
+  "id": 1637009822454,
+  "name": "asdsad",
+  "mail": "juak2abal@hotmail.com",
+  "password": "$2a$10$Ph25JXGL44e1ShVxd3j18.adQXzXMpKLNr1j.f084fjpsn.igwism",
+  "password2": "asdasd",
+  "image": "default.png"
  }
 ]

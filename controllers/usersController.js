@@ -61,8 +61,30 @@ const controller = {
     },
 
     processLogin: (req,res) => {
+		let email = req.body.email;
+		let userToLogin = users.find( user => user.mail == email);
 
-    },
+		if (userToLogin) {
+			let comparePassbCrypt = bcrypt.compareSync(req.body.password, userToLogin.password)
+			if (comparePassbCrypt){
+				return res.redirect('/users/'+userToLogin.id)
+			}
+				return res.render('login', {errors: {
+					email: {
+						msg: 'las credenciales son invalidas'
+					}}})}
+		
+
+		return res.render('login', {errors: {
+		email: {
+			msg: 'email no registrado'
+		}
+		
+		}
+		})
+
+		return res.send(userToLogin)
+		},
 
     detail: (req,res) => {
         let id = req.params.id

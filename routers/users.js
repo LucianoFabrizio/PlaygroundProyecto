@@ -46,7 +46,7 @@ router.post('/', upload.single('imgUser'), validations, usersController.store);
 router.get('/login', usersController.login)
 
 // Proceso de login (a donde se envía el formulario)
-router.post('/', usersController.processLogin)
+router.post('/login', usersController.processLogin)
 
 // Edición/Borrar usuario
 router.get('/:id/edit', usersController.edit) 
