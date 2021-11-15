@@ -21,3 +21,11 @@ Retro Cuarto Sprint:
   3. Continuar haciendo: Buena división de los roles fué nuevamente un punto fuerte. 
   4. Hacer menos: Estuvimos bien con eso. 
   5. Dejar de hacer: Muchas cosas al principio de los sprints y dejarlo colgado hasta el final.
+
+Retro Quinto Sprint: 
+
+  1. Comenzar a hacer: Configurar CSS para que sean acorde a los cambios nuevos.
+  2. Hacer más: Realizar mas comunicaciones diarias. 
+  3. Continuar haciendo: Division de trabajo al inicio del sprint. 
+  4. Hacer menos: comunicación asincrónica.
+  5. Dejar de hacer: Implementar nuevas funcionalidades al final del sprint.

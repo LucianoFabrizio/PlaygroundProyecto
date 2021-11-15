@@ -33,7 +33,6 @@ const validations = [
       }
       return true;
     })
-  
 ];
 
 // Registrar usuario

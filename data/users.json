@@ -54,5 +54,13 @@
   "password": "$2a$10$Ph25JXGL44e1ShVxd3j18.adQXzXMpKLNr1j.f084fjpsn.igwism",
   "password2": "asdasd",
   "image": "default.png"
+ },
+ {
+  "id": 1637013264483,
+  "name": "lucianito",
+  "mail": "lucianoarielfabrizioleguiza@gmail.com",
+  "password": "$2a$10$etL5z9JOLaNttXRu8cOHYeFpuRZ/w9LiG9SYanczSzctxtChTFQc.",
+  "password2": "gataturra69",
+  "image": "default.png"
  }
 ]
