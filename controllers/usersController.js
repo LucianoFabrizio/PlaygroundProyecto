@@ -6,6 +6,16 @@ const bcrypt = require('bcryptjs');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const consolas = products.filter(function(product){
+	return product.tipoProd == 'consola'
+})
+const juegos = products.filter(function(product){
+	return product.tipoProd == 'juego'
+})
+
 const controller = {
 
     register: (req,res) => {
@@ -38,8 +48,12 @@ const controller = {
 		};
 		users.push(newUser) 
 		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-		} 
-		// res.redirect('/');
+		return  res.render('index', {
+			consolas,
+			juegos
+		});
+	} 
+		
 	},
 
     login: (req,res) => {

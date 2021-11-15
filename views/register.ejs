@@ -64,9 +64,9 @@
             <label for="password2">Repetir contraseña:</label>
             
             <input type="password" id="password2" name="password2">
-            <% if (locals.errors && errors.password) { %>
+            <% if (locals.errors && errors.password2) { %>
                 <div class='text-danger'>
-                   <%= errors.password.msg   %> 
+                   <%= errors.password2.msg   %> 
                 </div>
                <% } %>
 

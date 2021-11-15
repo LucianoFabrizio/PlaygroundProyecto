@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
         let filename = `${Date.now()}_img${path.extname(file.originalname)}`; 
                 cb(null, filename);
     }
-})
+})  
 
 const upload = multer({storage})
 
@@ -22,14 +22,18 @@ const usersController = require('../controllers/usersController');
 const validations = [
     body('name').notEmpty().withMessage('Tienes que escribir un Nombre'),
     body('mail').notEmpty().withMessage('Tienes que escribir un mail'),
-    body('password<').notEmpty().withMessage('Tienes que escribir una contraseña'),
-    body('password').custom(() => {
-        if (req.body.password === req.body.Password2) {
-          return true;
-        } else {
-          return false;
-        }
-      }).withMessage('Tienes que escribir la misma contraseña en los dos campos')
+    body('password')
+    .notEmpty().withMessage('Tienes que escribir una contraseña'),
+    // .matches('password2').withMessage('Tienes que escribir la misma contraseña en los dos campos'),
+    body('password2') 
+    .notEmpty().withMessage('Tienes que escribir una contraseña')
+    .custom((value, { req }) => {
+      if (value !== req.body.password) {
+        throw new Error('Password confirmation does not match password');
+      }
+      return true;
+    })
+  
 ];
 
 // Registrar usuario

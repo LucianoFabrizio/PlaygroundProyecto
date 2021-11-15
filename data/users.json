@@ -14,6 +14,37 @@
   "mail": "juanperez@stationgame.com",
   "image": "default.png",
   "password": "password"
-
+ },
+ {
+  "id": 1637004097365,
+  "name": "asdasd",
+  "mail": "juak2abal@hotmail.com",
+  "password": "$2a$10$PTWY6Ln3kPjLnLnMZUgHz.e66HEKSZe9cHqHxof8tKQESAkRtmU2i",
+  "password2": "asdasd",
+  "image": "1637004097220_img.png"
+ },
+ {
+  "id": 1637004320695,
+  "name": "asdasd",
+  "mail": "juak2abal@hotmail.com",
+  "password": "$2a$10$Bb0vKmLnDFRhmKiZkLKxc.Z7otsaJUZSu/YQtvL8WrupUT5bX2miS",
+  "password2": "asd",
+  "image": "1637004320684_img.png"
+ },
+ {
+  "id": 1637004431655,
+  "name": "asdasd",
+  "mail": "juak2abal@hotmail.com",
+  "password": "$2a$10$RisZiXhnf/k9qozL3K0fUeNuznNkBgHWbdqpcDJrwUHeHlDiniZTK",
+  "password2": "asd",
+  "image": "1637004431643_img.jpeg"
+ },
+ {
+  "id": 1637004576480,
+  "name": "asd",
+  "mail": "juak2abal@hotmail.com",
+  "password": "$2a$10$0boXF1V7uEodK2IfvL8YbOsZX5pTyImik2Uh8QjOtrqVgoXHqCmoS",
+  "password2": "aaa",
+  "image": "default.png"
  }
 ]

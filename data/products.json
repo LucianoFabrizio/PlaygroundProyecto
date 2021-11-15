@@ -57,14 +57,5 @@
   "precio": "10000",
   "stock": "3",
   "descripcion": "Descripción corta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. "
- },
- {
-  "id": 1636919029092,
-  "name": "EDITAR",
-  "marca": "playstation",
-  "tipoProd": "juego",
-  "precio": "10000",
-  "descripcion": "EDITAR",
-  "image": "1636919029086.png"
  }
 ]
