@@ -5,6 +5,7 @@ const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const session = require('express-session');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -63,24 +64,26 @@ const controller = {
                 userToLogin.password
             );
             if (comparePassbCrypt) {
+                req.session.loggedUser = userToLogin;
                 return res.redirect('/users/' + userToLogin.id);
+            } else {
+                return res.render('login', {
+                    errors: {
+                        email: {
+                            msg: 'las credenciales son invalidas',
+                        },
+                    },
+                });
             }
+        } else {
             return res.render('login', {
                 errors: {
                     email: {
-                        msg: 'las credenciales son invalidas',
+                        msg: 'email no registrado',
                     },
                 },
             });
         }
-
-        return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'email no registrado',
-                },
-            },
-        });
     },
 
     detail: (req, res) => {
