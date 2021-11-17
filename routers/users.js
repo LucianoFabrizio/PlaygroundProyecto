@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
+const userAuth = require('../middlewares/userAuth.js')
 
 const { body } = require('express-validator');
 
