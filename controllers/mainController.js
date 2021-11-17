@@ -1,27 +1,26 @@
 const fs = require('fs');
-const path = require("path")
+const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const consolas = products.filter(function(product){
-	return product.tipoProd == 'consola'
-})
-const juegos = products.filter(function(product){
-	return product.tipoProd == 'juego'
-})
+const consolas = products.filter(function (product) {
+    return product.tipoProd == 'consola';
+});
+const juegos = products.filter(function (product) {
+    return product.tipoProd == 'juego';
+});
 
 const controlador = {
-    index : (req, res) => {
+    index: (req, res) => {
         res.render('index', {
-			consolas,
-			juegos,
-		});
+            consolas,
+            juegos,
+        });
     },
-    cart :(req, res) => {
+    cart: (req, res) => {
         res.render('cart');
-    }
-}        
+    },
+};
 
-
-module.exports=controlador
+module.exports = controlador;

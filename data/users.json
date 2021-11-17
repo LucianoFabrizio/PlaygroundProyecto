@@ -62,5 +62,13 @@
   "password": "$2a$10$etL5z9JOLaNttXRu8cOHYeFpuRZ/w9LiG9SYanczSzctxtChTFQc.",
   "password2": "gataturra69",
   "image": "default.png"
+ },
+ {
+  "id": 1637123229490,
+  "name": "Manu",
+  "mail": "manu@test.com",
+  "password": "$2a$10$/hQ594HDWqURAwnhois6OuoSxX5N5DML2YV.lqtrbNdEKlODKGQdy",
+  "password2": "test",
+  "image": "default.png"
  }
 ]

@@ -22,10 +22,10 @@ main {
     top: 0;
 }
 
-.logos{
-   display: flex;
-   align-items: center;
-   justify-content: left; 
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
 .logo-letras {
@@ -68,11 +68,10 @@ main {
     height: 50px;
     margin: 10px auto;
     border: 1px black solid;
-    
 }
 
 .xbox {
-    background-color: #107C10;
+    background-color: #107c10;
     height: 100%;
     width: 33.333333%;
     align-self: center;
@@ -80,19 +79,19 @@ main {
 }
 
 .playstation {
-    background-color: #006FCD;
+    background-color: #006fcd;
     height: 100%;
     width: 33.333333%;
     align-self: center;
-    background-image: "../img/xbox-banner.jpg"
+    background-image: '../img/xbox-banner.jpg';
 }
 
 .switch {
-    background-color: #E70009;
+    background-color: #e70009;
     height: 100%;
     width: 33.333333%;
     align-self: center;
-    background-image: "../img/xbox-banner.jpg"
+    background-image: '../img/xbox-banner.jpg';
 }
 
 /* INDEX */
@@ -157,7 +156,7 @@ main {
     padding: 10px;
     margin: 5px;
     background-color: #cce3de;
-    border: none;  
+    border: none;
 }
 
 .botones:hover {
@@ -201,14 +200,13 @@ main {
 /* FOOTER */
 
 .footer {
-    position:relative;
-    bottom:0;
-    width:100%;
-    height:30px;
-    background:#a4c3b2;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background: #a4c3b2;
     font-size: 10px;
 }
-
 
 /* PRODUCT-CART */
 
@@ -231,8 +229,8 @@ main {
 .img-prod {
     height: 50%;
     width: 50%;
-    border: 1px rgba(0,0,0,.5) solid;
-    }
+    border: 1px rgba(0, 0, 0, 0.5) solid;
+}
 
 .masmenos {
     display: flex;
@@ -240,14 +238,14 @@ main {
 }
 
 .cart-box {
-    display: flex;   
+    display: flex;
     box-shadow: grey;
     box-sizing: border-box;
     width: 70%;
     border: 1px grey solid;
     margin: 2px;
     margin: auto;
-    background-color: rgba(164,195,178,0.4);
+    background-color: rgba(164, 195, 178, 0.4);
 }
 
 #cuerpo-prod-cart {
@@ -264,19 +262,17 @@ main {
     justify-content: space-around;
     padding-left: 5px;
     font-size: 0.8rem;
-    
 }
 
 #cantbar {
     all: unset;
-}   
-
+}
 
 #mi-carrito {
     padding-bottom: 10px;
     padding-top: 5px;
     padding-left: 5px;
-}  
+}
 
 .subtotal {
     font-size: 1rem;
@@ -298,7 +294,7 @@ main {
 }
 
 .prods-resumen {
-    font-size: .9rem;
+    font-size: 0.9rem;
     display: flex;
 }
 
@@ -306,31 +302,28 @@ main {
     padding: 5px;
 
     font-weight: bolder;
-    
 }
 
 .x-borrar:hover {
     color: red;
-    opacity: .5;
-    
+    opacity: 0.5;
 }
 
 #total {
- padding-top: 5px;
- font-size: larger;
- font-weight: bold;
+    padding-top: 5px;
+    font-size: larger;
+    font-weight: bold;
 }
 
-#pay{
+#pay {
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: relative;
     bottom: 20px;
- 
 }
 
-#method-title{
+#method-title {
     all: revert;
     display: flex;
     margin: auto;
@@ -340,27 +333,24 @@ main {
 }
 
 main div form input {
-all: revert;
+    all: revert;
 }
-
 
 main div form label {
     all: revert;
-    }
-    
+}
 
-.payment{
+.payment {
     all: revert;
 }
 
-#cart-buttonbox{
-padding-top: 20px;
+#cart-buttonbox {
+    padding-top: 20px;
 }
 
-.cart-button{
+.cart-button {
     padding: 2px;
 }
-
 
 /* Inicio del Login */
 
@@ -383,7 +373,7 @@ padding-top: 20px;
     padding: 5px;
 }
 
-#registrarse{
+#registrarse {
     justify-content: space-around;
     display: flex;
     margin-top: 10%;
@@ -392,7 +382,7 @@ padding-top: 20px;
     background-color: red;
     width: 70%;
 }
-#crear-cuenta{
+#crear-cuenta {
     display: flex;
     justify-content: space-around;
     font-size: 1rem;
@@ -405,11 +395,11 @@ padding-top: 20px;
     padding: 20px;
 }
 
-#forgot-pasword{
+#forgot-pasword {
     font-size: 10px;
     width: 80%;
     text-align: end;
-    color:blue
+    color: blue;
 }
 
 .text-danger {
