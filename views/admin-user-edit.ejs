@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+    <%- include ("./partials/head") %>
+<body>
+    <!-- Header -->
+    <%- include ("./partials/header") %>
+
+    <main>
+        <!-- Banner -->
+        <%- include ("./partials/banner") %>
+
+        <section>
+        <h1>Ediciòn de Usuarios</h1>
+        <div id="cuadro-adminuser">
+        
+        <% for( let index = ; index < user.length; index++ ) { %>
+        
+        
+
+            <a href="/users/<%= user.id %>">
+                <h2> Cuenta de <%= user.name %> </h2>
+            </a>
+            <img src="../img/uploads/users/<%= user.image %>" alt="" class="imagen-usuario">
+            <a href="/users/edit/<%= user.id %>" class="botones">EDITAR PERFIL</a>
+            <form action="/users/<%= user.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="botones">ELIMINAR</button>
+
+                <% } %>
+
+        </div>
+
+
+
+        </section>
+
+
+
+
+
+
+        <form method="POST" enctype="multipart/form-data" class="formulario">
+            <h3>Editar informacion de <%= user.name %> </h3>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" value=<%= user.name %>>
+
+            <% if (locals.errors && errors.name) { %>
+             <div class='text-danger'>
+                <%= errors.name.msg   %> 
+             </div>
+            <% } %>
+
+            <h3>Tipo de Usuario:<% %></h3>
+
+            <label for="imgUser">Imagen de usuario:</label>
+              <input type="file"
+                     id="imgUser" name="imgUser"
+                     accept="image/png, image/jpeg">
+
+
+            <label for="mail">Correo electrónico:</label>
+            
+            <input type="email" id="mail" name="mail" value= <%= user.mail %>>
+            <% if (locals.errors && errors.mail) { %>
+                <div class='text-danger'>
+                   <%= errors.mail.msg   %> 
+                </div>
+               <% } %>
+
+            <label for="password">Contraseña:</label>
+            
+            <input type="password" id="password" name="password"  value="<%= locals.oldData ? oldData.password : null  %>">
+            <% if (locals.errors && errors.password) { %>
+                <div class='text-danger'>
+                   <%= errors.password.msg   %> 
+                </div>
+               <% } %>
+
+            <label for="password">Repetir contraseña:</label>
+            
+            <input type="password" id="password" name="password" value="<%= locals.oldData ? oldData.password : null  %>">
+            <% if (locals.errors && errors.password) { %>
+                <div class='text-danger'>
+                   <%= errors.password.msg   %> 
+                </div>
+               <% } %>
+
+            <button id="registrarse" action="submit">Guardar</button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- Footer -->
+    <%- include ("./partials/footer") %>
+    
+</body>
+</html>

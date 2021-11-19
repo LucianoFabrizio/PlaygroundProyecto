@@ -40,6 +40,9 @@ const validations = [
         }),
 ];
 
+// Administrar usuario
+// router.get('/adminEdit',usersController.adminEdit)
+
 // Registrar usuario
 router.get('/register', usersController.register);
 

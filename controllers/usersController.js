@@ -18,6 +18,10 @@ const juegos = products.filter(function (product) {
 });
 
 const controller = {
+    // adminEdit: (req, res) => { 
+    //     let user = users
+    //     res.render('admin-user-edit', {user});
+    // },
     register: (req, res) => {
         res.render('register');
     },
