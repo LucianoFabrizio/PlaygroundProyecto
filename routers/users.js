@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require('path');
 const multer = require('multer');
 const userAuth = require('../middlewares/userAuth.js');
+const userLogged = require('../middlewares/userAuth.js');
 
 const { body } = require('express-validator');
 
@@ -62,7 +63,7 @@ router.get('/:id/edit', usersController.edit);
 router.get('/:id', usersController.detail);
 
 // Formulario de edición de usuarios
-router.get('/edit/:id', usersController.edit);
+router.get('/edit/:id', userAuth, usersController.edit);
 
 // Proceso de Edición (a donde se envía el formulario)
 router.post(

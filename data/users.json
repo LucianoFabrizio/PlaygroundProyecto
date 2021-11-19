@@ -5,7 +5,8 @@
   "lastName": "Peréz",
   "mail": "juanperez@stationgame.com",
   "image": "default.png",
-  "password": "password"
+  "password": "password",
+  "admin": "1"
  },
  {
   "id": "1",
@@ -13,7 +14,8 @@
   "lastName": "Peréz",
   "mail": "juanperez@stationgame.com",
   "image": "default.png",
-  "password": "password"
+  "password": "password",
+  "admin": "1"
  },
  {
   "id": 1637004097365,
@@ -21,7 +23,8 @@
   "mail": "juak2abal@hotmail.com",
   "password": "$2a$10$PTWY6Ln3kPjLnLnMZUgHz.e66HEKSZe9cHqHxof8tKQESAkRtmU2i",
   "password2": "asdasd",
-  "image": "1637004097220_img.png"
+  "image": "1637004097220_img.png",
+  "admin": "0"
  },
  {
   "id": 1637004320695,
@@ -29,7 +32,8 @@
   "mail": "juak2abal@hotmail.com",
   "password": "$2a$10$Bb0vKmLnDFRhmKiZkLKxc.Z7otsaJUZSu/YQtvL8WrupUT5bX2miS",
   "password2": "asd",
-  "image": "1637004320684_img.png"
+  "image": "1637004320684_img.png",
+  "admin": "1"
  },
  {
   "id": 1637004431655,
@@ -37,7 +41,8 @@
   "mail": "juak2abal@hotmail.com",
   "password": "$2a$10$RisZiXhnf/k9qozL3K0fUeNuznNkBgHWbdqpcDJrwUHeHlDiniZTK",
   "password2": "asd",
-  "image": "1637004431643_img.jpeg"
+  "image": "1637004431643_img.jpeg",
+  "admin": "0"
  },
  {
   "id": 1637004576480,
@@ -45,7 +50,8 @@
   "mail": "juak2abal@hotmail.com",
   "password": "$2a$10$0boXF1V7uEodK2IfvL8YbOsZX5pTyImik2Uh8QjOtrqVgoXHqCmoS",
   "password2": "aaa",
-  "image": "default.png"
+  "image": "default.png",
+  "admin": "0"
  },
  {
   "id": 1637009822454,
@@ -53,7 +59,8 @@
   "mail": "juak2abal@hotmail.com",
   "password": "$2a$10$Ph25JXGL44e1ShVxd3j18.adQXzXMpKLNr1j.f084fjpsn.igwism",
   "password2": "asdasd",
-  "image": "default.png"
+  "image": "default.png",
+  "admin": "0"
  },
  {
   "id": 1637013264483,
@@ -61,7 +68,8 @@
   "mail": "lucianoarielfabrizioleguiza@gmail.com",
   "password": "$2a$10$etL5z9JOLaNttXRu8cOHYeFpuRZ/w9LiG9SYanczSzctxtChTFQc.",
   "password2": "gataturra69",
-  "image": "default.png"
+  "image": "default.png",
+  "admin": "0"
  },
  {
   "id": 1637123229490,
@@ -69,6 +77,7 @@
   "mail": "manu@test.com",
   "password": "$2a$10$/hQ594HDWqURAwnhois6OuoSxX5N5DML2YV.lqtrbNdEKlODKGQdy",
   "password2": "test",
-  "image": "default.png"
+  "image": "default.png",
+  "admin": "0"
  }
 ]
