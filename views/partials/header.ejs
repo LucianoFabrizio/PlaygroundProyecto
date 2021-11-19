@@ -4,9 +4,23 @@
          <a href='/'> <img src="/img/dpad.png" alt="Logo" class="logo-imagen"></a>
       </div>
           <div class="barra-busqueda"><p>Buscar</p></a></div>
-         <div class='r-icons'><a href="/users/login"> <img src="/img/usuario.png" alt="Logo" class="usuario"></a>
+
+          <% if (locals.user) { %>
+          <div class='r-icons'><a href="/users/<%= locals.user.id %>"> <img src="/img/uploads/<%= locals.user.image %> " alt="Logo" class="usuario"></a>
+            <a href="/cart"> <img src="/img/carrito.png"  alt="Logo" class="carrito"></a>
+         </div>
+           
+          <% } else { %>
+           
+
+            <div class='r-icons'><a href="/users/login"> <img src="/img/usuario.png" alt="Logo" class="usuario"></a>
          <a href="/cart"> <img src="/img/carrito.png" alt="Logo" class="carrito"></a>
+
+         <% } %> 
       </div>
+         
+           
+         
    </div>
 </header>
  

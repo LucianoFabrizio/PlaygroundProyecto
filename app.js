@@ -4,6 +4,8 @@ const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
 
+const sessionMiddle = require('./middlewares/sessionMiddle')
+
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -22,6 +24,7 @@ const usersRouter = require('./routers/users');
 app.use('/', mainRouter);
 app.use('/products', productRouter);
 app.use('/users', usersRouter);
+app.use(sessionMiddle)
 
 app.listen(PORT, () => {
     console.log(`El servidor está corriento en http://localhost:` + PORT);
