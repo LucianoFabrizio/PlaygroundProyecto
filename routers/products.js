@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-const userLogged = require('../middlewares/userAuth.js');
+const userLogged = require('../middlewares/userLogged.js');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
