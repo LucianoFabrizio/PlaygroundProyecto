@@ -10,7 +10,7 @@
         <!-- Banner -->
         <%- include ("./partials/banner") %>
         
-            <form method="POST" action="/products/edit/<%= product.id %>" class="formulario" enctype="multipart/form-data">
+            <form method="POST" action="/products/edit/<%= product.id %>?_method=PUT" class="formulario" enctype="multipart/form-data">
 
             <h3>Modificar producto existente: <%= product.name %></h3>
 

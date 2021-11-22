@@ -10,7 +10,7 @@
         <!-- Banner -->
         <%- include ("./partials/banner") %>
 
-        <form method="POST" enctype="multipart/form-data" class="formulario">
+        <form method="PUT" action="/users/user.id?_method=PUT" enctype="multipart/form-data" class="formulario">
             <h3>Editar informacion de <%= user.name %> </h3>
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" value=<%= user.name %>>
@@ -60,7 +60,15 @@
 
             </div>
 
+
         </form>
+
+
+        
+        <form action="/users/<%= user.id %>?_method=DELETE" method="POST">
+            <button type="submit" class="botones">ELIMINAR</button>
+        </form>
+
 
     </main>
 

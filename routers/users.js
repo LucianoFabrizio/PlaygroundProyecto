@@ -66,7 +66,7 @@ router.get('/:id', usersController.detail);
 router.get('/edit/:id', userAuth, usersController.edit);
 
 // Proceso de Edición (a donde se envía el formulario)
-router.post(
+router.put(
     '/edit/:id',
     upload.single('imgUser'),
     validations,
