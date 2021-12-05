@@ -4,6 +4,7 @@ module.exports = function(sequelize, dataTypes) {
     let cols = {
         id: {
             type: dataTypes.INTEGER,
+            primaryKey: true,
             allowNull: false
         },
         creation_date: {

@@ -4,6 +4,7 @@ module.exports = function(sequelize, dataTypes) {
     let cols = {
         id: {
             type: dataTypes.INTEGER,
+            primaryKey: true,
             allowNull: false
         },
         name: {
@@ -25,7 +26,7 @@ module.exports = function(sequelize, dataTypes) {
         admin: {
             type: dataTypes.BOOLEAN,
             allowNull: false
-        },
+        }
     };
 
     let config = {
