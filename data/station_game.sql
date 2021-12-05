@@ -5,9 +5,9 @@ CREATE TABLE `products` (
    `id` INT NOT NULL AUTO_INCREMENT,
    `name` VARCHAR(50) NOT NULL,
    `image` VARCHAR(255) NOT NULL,
-   `creation_date` DATE NOT NULL,
-   `modified_date` DATE,
-   `deletion_date` DATE,
+   `creation_date` DATETIME NOT NULL,
+   `modified_date` DATETIME,
+   `deletion_date` DATETIME,
    `price` INT NOT NULL,
    `gallery` VARCHAR(255),
    `category_id` INT NOT NULL,
@@ -53,9 +53,15 @@ CREATE TABLE `users` (
    `name` VARCHAR(50),
    `email` VARCHAR(50) NOT NULL,
    `password` VARCHAR(50) NOT NULL,
-   `creation_date` DATE,
-   `order_id` INT,
+   `creation_date` DATETIME NOT NULL,
    `admin` TINYINT NOT NULL,
+   PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `users_orders` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `user_id` INT NOT NULL,
+   `order_id` INT NOT NULL,
    PRIMARY KEY (`id`)
 );
 
@@ -70,4 +76,7 @@ ALTER TABLE `products_order` ADD CONSTRAINT `FK_dd971fd4-a3df-46ea-a7ce-186a2392
 
 ALTER TABLE `order` ADD CONSTRAINT `FK_727cc25f-665a-42a2-8e44-d999df931ce1` FOREIGN KEY (`state`) REFERENCES `states`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
-ALTER TABLE `users` ADD CONSTRAINT `FK_97f0837a-1994-4678-a9ac-730b8775a34e` FOREIGN KEY (`order_id`) REFERENCES `order`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `users_orders` ADD CONSTRAINT `FK_f94be288-9da1-4af7-acf7-30f2da8971ba` FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE `users_orders` ADD CONSTRAINT `FK_95582777-d240-4e51-b845-8f80169fb8ec` FOREIGN KEY (`order_id`) REFERENCES `order`(`id`)  ;
+
