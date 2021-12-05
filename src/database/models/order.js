@@ -28,7 +28,17 @@ module.exports = function(sequelize, dataTypes) {
     let Order = sequelize.define(alias, cols, config);
 
     Order.associate = function(models) {
-        Order.hasMany()
+        Order.belongsToMany(models.User, {
+            as: "users",
+            through: "users_orders",
+            foreignKey: "order_id",
+            otherKey: "user_id",
+            timestamps: false
+        });
+        Order.hasMany(models.State, {
+            as: "states",
+            foreignKey: "state"
+        })
     }
 
     return Order

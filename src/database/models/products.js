@@ -52,7 +52,14 @@ module.exports = function(sequelize, dataTypes) {
     let Product = sequelize.define(alias, cols, config);
 
     Product.associate = function(models) {
-        Product.hasMany()
+        Product.hasMany(models.Brand, {
+            as: "brands",
+            foreignKey: "brand_id"
+        });
+        Product.hasMany(models.Category, {
+            as: "categories",
+            foreignKey: "category"
+        })
     }
 
     return Product
