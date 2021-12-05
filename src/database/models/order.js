@@ -35,10 +35,18 @@ module.exports = function(sequelize, dataTypes) {
             otherKey: "user_id",
             timestamps: false
         });
+        Order.belongsToMany(models.Product, {
+            as: "products",
+            through: "products_order",
+            foreignKey: "order_id",
+            otherKey: "product_id",
+            timestamps: false
+        });
         Order.hasMany(models.State, {
             as: "states",
             foreignKey: "state"
         })
+    
     }
 
     return Order
