@@ -10,7 +10,7 @@ Dependiendo por donde se quiera sumergir el usuario, STATION GAME brindará una 
 
 Nuestro público apunta a los amantes de los videojuegos, el cuál piensa de ya sea un juego, consola o accesorio, como una pieza coleccionable de este mundo.
 
-<img src="./design/imagen1.png" width = 400 height= 200>
+<img src="./other/imagen1.png" width = 400 height= 200>
 
 
 ### Sitios de Referencia :
