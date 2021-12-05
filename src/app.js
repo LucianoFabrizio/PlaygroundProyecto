@@ -17,14 +17,14 @@ app.use(methodOverride('_method'));
 app.set('view engine', 'ejs'); // Define que el motor que utilizamos es EJS
 app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la carpeta de las Vistas
 
-const mainRouter = require('./routers/main');
-const productRouter = require('./routers/products');
-const usersRouter = require('./routers/users');
+// const mainRouter = require('./routers/main');
+// const productRouter = require('./routers/products');
+// const usersRouter = require('./routers/users');
 
-app.use('/', mainRouter);
-app.use('/products', productRouter);
-app.use('/users', usersRouter);
-app.use(sessionMiddle)
+// app.use('/', mainRouter);
+// app.use('/products', productRouter);
+// app.use('/users', usersRouter);
+// app.use(sessionMiddle)
 
 app.listen(PORT, () => {
     console.log(`El servidor está corriento en http://localhost:` + PORT);
