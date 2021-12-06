@@ -23,7 +23,7 @@ module.exports = function(sequelize, dataTypes) {
 
     let config = {
         tableName: "order",
-        timestamps: "false"
+        timestamps: false
     }
 
     let Order = sequelize.define(alias, cols, config);
@@ -34,14 +34,12 @@ module.exports = function(sequelize, dataTypes) {
             through: "users_orders",
             foreignKey: "order_id",
             otherKey: "user_id",
-            timestamps: false
         });
         Order.belongsToMany(models.Product, {
             as: "products",
             through: "products_order",
             foreignKey: "order_id",
-            otherKey: "product_id",
-            timestamps: false
+            otherKey: "product_id"
         });
         Order.hasMany(models.State, {
             as: "states",

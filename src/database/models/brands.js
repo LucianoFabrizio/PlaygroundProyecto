@@ -15,7 +15,7 @@ module.exports = function(sequelize, dataTypes) {
 
     let config = {
         tableName: "brands",
-        timestamps: "false"
+        timestamps: false
     }
 
     let Brand = sequelize.define(alias, cols, config);
