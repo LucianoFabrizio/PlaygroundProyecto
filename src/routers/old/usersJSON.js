@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-const userAuth = require('../middlewares/userAuth.js');
-const userLogged = require('../middlewares/userAuth.js');
+const userAuth = require('../../middlewares/userAuth.js');
+const userLogged = require('../../middlewares/userAuth.js');
 
 const { body } = require('express-validator');
 
@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-const usersController = require('../controllers/usersController');
+const usersController = require('../../controllers/usersController');
 
 const validations = [
     body('name').notEmpty().withMessage('Tienes que escribir un Nombre'),
