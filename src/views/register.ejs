@@ -24,7 +24,7 @@
         <%- include ("./partials/banner") %>
     
 
-        <form action="/users" method="POST" enctype="multipart/form-data" class="formulario">
+        <form action="/users/create" method="POST" class="formulario">
             <h3>Crear nuevo usuario</h3>
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null  %>">
@@ -35,20 +35,12 @@
              </div>
             <% } %>
 
-
-
-            <label for="imgUser">Imagen del Producto:</label>
-              <input type="file"
-                     id="imgUser" name="imgUser"
-                     accept="image/png, image/jpeg">
-
-
-            <label for="mail">Correo electrónico:</label>
+            <label for="email">Correo electrónico:</label>
             
-            <input type="email" id="mail" name="mail"  value="<%= locals.oldData ? oldData.mail : null  %>">
-            <% if (locals.errors && errors.mail) { %>
+            <input type="email" id="email" name="email"  value="<%= locals.oldData ? oldData.email : null  %>">
+            <% if (locals.errors && errors.email) { %>
                 <div class='text-danger'>
-                   <%= errors.mail.msg   %> 
+                   <%= errors.email.msg   %> 
                 </div>
                <% } %>
 
