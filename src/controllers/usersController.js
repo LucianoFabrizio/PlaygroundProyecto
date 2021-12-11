@@ -59,23 +59,23 @@ const usersController = {
         .then(()=> {
             return res.redirect('/')})
         .catch(error => res.send(error))
-    }
-    // delete: function (req,res) {
-    //     let movieId = req.params.id;
-    //     Movies
-    //     .findByPk(movieId)
-    //     .then(Movie => {
-    //         return res.render(path.resolve(__dirname, '..', 'views',  'moviesDelete'), {Movie})})
-    //     .catch(error => res.send(error))
-    // },
-    // destroy: function (req,res) {
-    //     let movieId = req.params.id;
-    //     Movies
-    //     .destroy({where: {id: movieId}, force: true}) // force: true es para asegurar que se ejecute la acción
-    //     .then(()=>{
-    //         return res.redirect('/movies')})
-    //     .catch(error => res.send(error))
-    // }
+    },
+     delete: function (req,res) {
+         Users
+         .findByPk(req.params.id)
+         .then((user) => {
+            res.render('user-delete.ejs', { user });
+        })
+         .catch(error => res.send(error))
+     },
+     destroy: function (req,res) {
+         let userId = req.params.id;
+         Users
+         .destroy({where: {id: userId}, force: true}) // force: true es para asegurar que se ejecute la acción
+         .then(()=>{
+             return res.redirect('/')})
+         .catch(error => res.send(error))
+     }
 };
 
 module.exports = usersController;
