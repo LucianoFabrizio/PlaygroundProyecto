@@ -53,14 +53,16 @@ const usersController = {
 
     processLogin: (req, res) => {
         const emailUser = req.body.email;
-        const userToLogin = Users.find({
+        const userToLogin = db.User.findOne({
             where: {
-                password: 'emailUser'
+                email: emailUser
             }
         })      
-          .then(() => {
+          .then((e) => {
 
-           res.send(userToLogin)
+            res.send(e)          
+
+            
 
        
             // let comparePassbCrypt = bcrypt.compareSync(
