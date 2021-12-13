@@ -2,6 +2,7 @@ const path = require('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op, DATE } = require('sequelize');
+const { validationResult } = require('express-validator');
 
 const Users = db.User;
 
@@ -24,18 +25,65 @@ const usersController = {
         res.render('register.ejs');
     },
     create: function (req, res) {
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0) {
+            return res.render('register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+            });
+        } else {
         Users.create({
             name: req.body.name,
             email: req.body.email,
             password: req.body.password,
-            admin: 0,
-            creation_date: DATE,
+            admin: false,
+            creation_date: Date.now()
+            
         })
             .then(() => {
                 return res.redirect('/');
             })
             .catch((error) => res.send(error));
+    }},
+    
+    login: function (req, res){
+        res.render('login.ejs')
     },
+
+    processLogin: (req, res) => {
+        const emailUser = req.body.email;
+        const userToLogin = Users.find({
+            where: {
+                password: 'emailUser'
+            }
+        })      
+          .then(() => {
+
+           res.send(userToLogin)
+
+       
+            // let comparePassbCrypt = bcrypt.compareSync(
+            //     req.body.password,
+            //     userToLogin.password
+            // );
+            // if (comparePassbCrypt) {
+            //     return res.render('/users/detail/' + userToLogin.id,
+            //     {
+            //         user: userToLogin
+            //     })
+            // .catch((error => 
+            //  res.render('login', {
+            //     errors: {
+            //         email: {
+            //             msg: 'las credenciales son invalidas',
+            //         },
+            //     },
+            // })
+            // ))
+    })},
+
+
     edit: function (req, res) {
         Users.findByPk(req.params.id)
             .then((user) => {
@@ -43,7 +91,7 @@ const usersController = {
             })
             .catch((error) => res.send(error));
     },
-    update: function (req,res) {
+    update: function (req ,res) {
         let userId = req.params.id;
         Users
         .update(
