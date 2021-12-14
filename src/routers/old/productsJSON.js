@@ -36,6 +36,6 @@ router.get('/edit/:id', userLogged, productsController.edit);
 router.put('/edit/:id', upload.single('imgProd'), userLogged, productsController.update);
 
 // Acción de borrado
-router.delete('/:id', productsController.delete);
+router.delete('/:id', userLogged, productsController.delete);
 
 module.exports = router;
