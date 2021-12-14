@@ -59,34 +59,30 @@ const usersController = {
             }
         })      
           .then((e) => {
-
-            res.send(e)          
-
-            
-
+          
+            console.log(e)
        
             // let comparePassbCrypt = bcrypt.compareSync(
             //     req.body.password,
             //     userToLogin.password
             // );
             // if (comparePassbCrypt) {
-            //     return res.render('/users/detail/' + userToLogin.id,
-            //     {
-            //         user: userToLogin
-            //     })
-            // .catch((error => 
-            //  res.render('login', {
-            //     errors: {
-            //         email: {
-            //             msg: 'las credenciales son invalidas',
-            //         },
-            //     },
-            // })
-            // ))
-    })},
+                return res.render('user-detail.ejs',
+                {
+                    user: e.dataValues
+                })})
+            .catch((error => 
+             res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'las credenciales son invalidas',
+                    }
+                }
+            }) ))
+    },
 
 
-    edit: function (req, res) {
+    edit: function (req,res) {
         Users.findByPk(req.params.id)
             .then((user) => {
                 res.render('user-edit.ejs', { user });
