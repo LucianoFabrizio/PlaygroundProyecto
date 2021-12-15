@@ -16,28 +16,18 @@
             <h2>Consolas</h2>
             <div class="lista-de-productos">
                 
-                <% consolas.forEach(function(product){ %>
+                <% for ( let i = 0; i < product.length; i++) { %>
                     <div class="producto">
-                        <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
-                        <img src="../img/<%= product.image %>" alt="">
-                        <p><%= product.descripcion %></p>
+                        <h3><a href="/products/<%= product[i].id %>/detail"><%= product[i].name %></a></h3>
+                        <img src="../img/<%= product[i].image %>" alt="">
+                        <p><%= %></p>
                     </div>
-                <% }) %>
+                <% } %>
 
             </div>
             
             <h2>Juegos</h2>
-            <div class="lista-de-productos">
-                
-                <% juegos.forEach(function(product){ %>
-                    <div class="producto">
-                        <h3><a href="/products/detail/<%= product.id %>"><%= product.name %></a></h3>
-                        <img src="../img/<%= product.image %>" alt="">
-                        <p><%= product.descripcion %></p>
-                    </div>
-                <% }) %>
-
-            </div>
+         
 
         </section>
 

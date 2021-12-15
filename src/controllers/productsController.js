@@ -22,8 +22,8 @@ const controller = {
                 }
             }
         })
-        .then((e) => {
-            const product = e.dataValues
+        .then((product) => {
+            console.log(product)
             res.render('products.ejs', { product })
 
             // res.redirect('/products/')
@@ -50,7 +50,7 @@ const controller = {
     detail: function(req, res) {
         db.Product.findByPk(req.params.id)
             .then((product) => {
-                res.render('user-detail.ejs', { product });
+                res.render('detail.ejs', { product });
             })
             .catch((error) => res.send(error));
     },
