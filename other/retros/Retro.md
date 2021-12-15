@@ -29,3 +29,11 @@ Retro Quinto Sprint:
   3. Continuar haciendo: Division de trabajo al inicio del sprint. 
   4. Hacer menos: comunicación asincrónica.
   5. Dejar de hacer: Implementar nuevas funcionalidades al final del sprint.
+
+Retro Sexto Sprint: 
+
+  1. Comenzar a hacer: Nuevamente, arreglar CSS para que sean acorde a los cambios nuevos.
+  2. Hacer más: Comunicación. 
+  3. Continuar haciendo: Cumplir objetivos a tiempo. 
+  4. Hacer menos: Comunicación asincrónica.
+  5. Dejar de hacer: Dejar todo para el final. 
