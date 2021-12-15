@@ -2,8 +2,15 @@
    <div class="header">
       <div class='logos'> <a href='/'> <img src="/img/letrasLogo.png" alt="Logo" class="logo-letras"></a>
          <a href='/'> <img src="/img/dpad.png" alt="Logo" class="logo-imagen"></a>
+      </a>
       </div>
-          <div class="barra-busqueda"><p>Buscar</p></a></div>
+          <div>
+               <form action="/products" method="GET">
+                <input for="text" class="barra-busqueda" name="prodSearch" placeholder="buscar..."
+                >
+               <button action="submit">buscar</button>
+            </form>
+          </div>
 
           <% if (locals.user) { %>
           <div class='r-icons'><a href="/users/<%= locals.user.id %>"> <img src="/img/uploads/<%= locals.user.image %> " alt="Logo" class="usuario"></a>

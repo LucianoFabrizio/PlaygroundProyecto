@@ -19,7 +19,7 @@ router.put('/:id/edit', productsController.processEdit);
 router.get('/:id/detail', productsController.detail);
 
 //BUSCAR
-
+router.get('/search', productsController.search)
 // ELIMINAR
 router.delete('/', productsController.delete);
 

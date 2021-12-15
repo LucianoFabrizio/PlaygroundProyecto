@@ -9,6 +9,20 @@ const controller = {
             })
     },
 
+    search: function(req,res) {
+        const prodName = req.params
+        db.Product.findAll({
+            where: {
+                name: prodName
+            }
+        })
+        .then((product) => {
+console.log(product)
+            res.redirect('/products/')
+        })
+        .catch(error => res.redirect('/'))
+    },
+
     create: function(req, res) {
         res.render('product-create.ejs')
     },
