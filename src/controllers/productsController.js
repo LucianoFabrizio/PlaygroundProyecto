@@ -10,7 +10,7 @@ const controller = {
     },
 
     create: function(req, res) {
-    
+        res.render('product-create.ejs')
     },
 
     processCreate: function(req, res) {
@@ -18,7 +18,7 @@ const controller = {
     },
 
     edit: function(req, res) {
-    
+     res.render('product-edit.ejs')
     },
 
     processEdit: function(req, res) {
@@ -26,8 +26,13 @@ const controller = {
     },
 
     detail: function(req, res) {
-    
+        db.Product.findByPk(req.params.id)
+            .then((product) => {
+                res.render('user-detail.ejs', { product });
+            })
+            .catch((error) => res.send(error));
     },
+    
 
     delete: function(req, res) {
         let productId = req.params.id;
@@ -38,5 +43,6 @@ const controller = {
         .catch(error => res.send(error))
     }
 }
+
 
 module.exports = controller;
