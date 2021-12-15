@@ -1,4 +1,6 @@
 const db = require('../database/models');
+const { Op } = require("sequelize")
+
 
 const controller = {
     list: function(req, res) {
@@ -10,15 +12,21 @@ const controller = {
     },
 
     search: function(req,res) {
-        const prodName = req.params
+        const prodName = req.query.prodSearch
+        
         db.Product.findAll({
             where: {
-                name: prodName
+                name: {
+                    [Op.like]:
+                 '%' + prodName + '%'
+                }
             }
         })
-        .then((product) => {
-console.log(product)
-            res.redirect('/products/')
+        .then((e) => {
+            const product = e.dataValues
+            res.render('products.ejs', { product })
+
+            // res.redirect('/products/')
         })
         .catch(error => res.redirect('/'))
     },
