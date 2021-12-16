@@ -36,7 +36,22 @@ const controller = {
     },
 
     processCreate: function(req, res) {
-    
+        console.log(req.body);
+        db.Product.create({
+            name: req.body.name,
+            image: null,
+            creation_date: Date.now(),
+            modified_date: null,
+            deletion_date: null,
+            price: req.body.price,
+            gallery: null,
+            category: req.body.category,
+            brand: req.body.brand            
+        })
+            .then(() => {
+                return res.redirect('/');
+            })
+            .catch((error) => res.send(error));
     },
 
     edit: function(req, res) {
