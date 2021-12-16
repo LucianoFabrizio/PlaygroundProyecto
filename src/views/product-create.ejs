@@ -10,7 +10,7 @@
         <!-- Banner -->
         <%- include ("./partials/banner") %>
         
-            <form action="/products" method="POST" enctype="multipart/form-data" class="formulario">
+            <form action="/products/create" method="POST" enctype="multipart/form-data" class="formulario">
 
             <h3>Crear producto</h3>
 
@@ -19,17 +19,17 @@
 
             <label for="marca">Marca:</label>
             <select id="marca" name="marca">
-              <option value="playstation">Play-Station</option>  
-              <option value="xbox">Xbox</option>   
-              <option value="nintendo">Nintendo</option>
-              <option value="varios">Otro</option>
+              <option value="1">Play-Station</option>  
+              <option value="2">Xbox</option>   
+              <option value="3">Nintendo</option>
+              <option value="4">Otro</option>
             </select>  
-
+            
             <label for="tipoProd">Tipo de Producto:</label>
             <select id="tipoProd" name="tipoProd">
-                <option value="juego">Juego</option>  
-                <option value="consola">Consola</option>   
-                <option value="accesorio">Accesorio</option>
+                <option value="1">Juego</option>  
+                <option value="2">Consola</option>   
+                <option value="3">Accesorio</option>
               </select>  
 
               <label for="imgProd">Imagen del Producto:</label>

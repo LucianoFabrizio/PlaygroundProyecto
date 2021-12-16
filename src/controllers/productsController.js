@@ -31,12 +31,29 @@ const controller = {
         .catch(error => res.redirect('/'))
     },
 
+
     create: function(req, res) {
         res.render('product-create.ejs')
     },
 
     processCreate: function(req, res) {
-    
+        db.Product.create({
+            name: req.body.name,
+            image: req.body.imgProd,
+            creation_date: Date.now(),
+            modified_date: Date.now(),
+            deletion_date: null,
+            price: req.body.precio,
+            gallery: req.body.imgProd,
+            category_id: req.body.tipoProd,
+            brand_id: req.body.marca
+            
+        })
+            .then(() => {
+                return res.redirect('/create');
+            })
+            .catch((error) => res.send(error));
+
     },
 
     edit: function(req, res) {
