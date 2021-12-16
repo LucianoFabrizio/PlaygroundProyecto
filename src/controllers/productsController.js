@@ -39,14 +39,14 @@ const controller = {
         console.log(req.body);
         db.Product.create({
             name: req.body.name,
-            image: null,
+            image: req.file.filename,
             creation_date: Date.now(),
             modified_date: null,
             deletion_date: null,
             price: req.body.price,
             gallery: null,
-            category: req.body.category,
-            brand: req.body.brand            
+            category_id: req.body.category,
+            brand_id: req.body.brand            
         })
             .then(() => {
                 return res.redirect('/');
