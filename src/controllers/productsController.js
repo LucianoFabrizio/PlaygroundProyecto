@@ -60,13 +60,13 @@ const controller = {
 
     processEdit: function (req, res) {
         let prodId = req.params.id;
+        console.log(req.body);
         db.Product.update(
             {
                 name: req.body.name,
                 image: req.body.image,
                 creation_date: Date.now(),
                 modified_date: Date.now(),
-                deletion_date: null,
                 price: req.body.precio,
                 gallery: req.body.imgProd,
                 category_id: req.body.tipoProd,

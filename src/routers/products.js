@@ -15,7 +15,7 @@ router.post('/create', upload.single('image'), productsController.processCreate)
 
 // EDITAR
 router.get ('/:id/edit', productsController.edit);
-router.put('/:id/edit', productsController.processEdit);
+router.put('/:id/edit', upload.single('image'), productsController.processEdit);
 
 //DETALLE
 router.get('/:id/detail', productsController.detail);
