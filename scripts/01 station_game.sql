@@ -4,14 +4,14 @@ USE stationgame;
 CREATE TABLE `products` (
    `id` INT NOT NULL AUTO_INCREMENT,
    `name` VARCHAR(50) NOT NULL,
-   `image` VARCHAR(255) NOT NULL,
+   `image` VARCHAR(255),
    `creation_date` DATETIME NOT NULL,
    `modified_date` DATETIME,
    `deletion_date` DATETIME,
    `price` INT NOT NULL,
    `gallery` VARCHAR(255),
    `category_id` INT NOT NULL,
-   `brand_id` INT,
+   `brand_id` INT NOT NULL,
    PRIMARY KEY (`id`)
 );
 

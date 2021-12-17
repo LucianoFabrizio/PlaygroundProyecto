@@ -3,6 +3,10 @@ const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const bodyParser = require('body-parser');
+
+
+
 
 const sessionMiddle = require('./middlewares/sessionMiddle')
 
@@ -11,6 +15,10 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
 app.use(session({ secret: 'Session de Station Game' }));
 app.use(methodOverride('_method'));
 
@@ -24,6 +32,7 @@ const usersRouter = require('./routers/users');
 app.use('/', mainRouter);
 app.use('/products', productRouter);
 app.use('/users', usersRouter);
+
 // app.use(sessionMiddle)
 
 app.listen(PORT, () => {
