@@ -37,6 +37,7 @@ const controller = {
     },
 
     processCreate: function(req, res) {
+        console.log(req.body)
         db.Product.create({
             name: req.body.name,
             image: req.body.imgProd,
@@ -50,7 +51,7 @@ const controller = {
             
         })
             .then(() => {
-                return res.redirect('/create');
+                return res.redirect('/');
             })
             .catch((error) => res.send(error));
 
@@ -61,7 +62,30 @@ const controller = {
     },
 
     processEdit: function(req, res) {
-    
+        let prodId = req.params.id;
+        Users
+        .update(
+            {
+                    name: req.body.name,
+                    image: req.body.image,
+                    creation_date: Date.now(),
+                    modified_date: Date.now(),
+                    deletion_date: null,
+                    price: req.body.precio,
+                    gallery: req.body.imgProd,
+                    category_id: req.body.tipoProd,
+                    brand_id: req.body.marca
+        
+                
+            },
+            {
+                where: {id: prodId}
+            })
+        .then(()=> {
+            return res.redirect('/')})
+        .catch(error => res.send(error))
+    },
+     delete: function (req,res) {
     },
 
     detail: function(req, res) {
