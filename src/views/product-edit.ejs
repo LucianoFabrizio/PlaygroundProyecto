@@ -10,7 +10,7 @@
         <!-- Banner -->
         <%- include ("./partials/banner") %>
         
-            <form method="POST" action="/products/edit/<%= product.id %>?_method=PUT" class="formulario" enctype="multipart/form-data">
+            <form method="POST" action="/products/<%= product.id %>/edit?_method=PUT" class="formulario" enctype="multipart/form-data">
 
             <h3>Modificar producto existente: <%= product.name %></h3>
 
@@ -19,16 +19,16 @@
 
             <label for="marca">Marca:</label>
             <select id="marca" name="marca">
-              <option value="1">Play-Station</option>  
-              <option value="2">Xbox</option>   
-              <option value="3">Nintendo</option>
-              <option value="4">Otro</option>
+                <option value="1">Sony</option>  
+                <option value="2">Nintendo</option>
+                <option value="3">Microsoft</option>   
+
             </select>  
 
             <label for="tipoProd">Tipo de Producto:</label>
             <select id="tipoProd" name="tipoProd">
-                <option value="1">Juego</option>  
-                <option value="2">Consola</option>   
+                <option value="1">Consola</option>   
+                <option value="2">Juego</option>  
                 <option value="3">Accesorio</option>
               </select>  
 
