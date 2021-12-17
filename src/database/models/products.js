@@ -5,8 +5,7 @@ module.exports = function(sequelize, dataTypes) {
         id: {
             type: dataTypes.INTEGER,            
             autoIncrement: true,
-            primaryKey: true,
-            allowNull: false
+            primaryKey: true
         },
         name: {
             type: dataTypes.STRING,
@@ -14,7 +13,6 @@ module.exports = function(sequelize, dataTypes) {
         },
         image: {
             type: dataTypes.STRING,
-            allowNull: false
         },
         creation_date: {
             type: dataTypes.DATE(6),
@@ -22,11 +20,9 @@ module.exports = function(sequelize, dataTypes) {
         },
         modified_date: {
             type: dataTypes.DATE(6),
-            allowNull: false
         },
         deletion_date: {
             type: dataTypes.DATE(6),
-            allowNull: false
         },
         price: {
             type: dataTypes.INTEGER,
@@ -34,7 +30,6 @@ module.exports = function(sequelize, dataTypes) {
         },
         gallery: {
             type: dataTypes.STRING,
-            allowNull: false
         },
         category_id: {
             type: dataTypes.INTEGER,
