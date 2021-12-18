@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Head -->
-    <%- include ("./partials/head") %>
-<body>
-    <!-- Header -->
-    <%- include ("./partials/header") %>
+<!-- Head -->
+<%- include ("./partials/head") %>
 
-    <main>
-        <!-- Banner -->
-        <%- include ("./partials/banner") %>
+    <body>
+        <!-- Header -->
+        <%- include ("./partials/header") %>
 
-        <section class="productos">
+            <main>
+                <!-- Banner -->
+                <%- include ("./partials/banner") %>
+
+                    <section class="productos">
 
 
-            <h2>Consolas</h2>
-            <div class="lista-de-productos">
-                
-                <% for ( let i = 0; i < product.length; i++) { %>
-                    <div class="producto">
-                        <h3><a href="/products/detail/<%= product[i].id %>"><%= product[i].name %></a></h3>
-                        <img src="../img/<%= product[i].image %>" alt="">
-                        <p><%= %></p>
-                    </div>
-                <% } %>
+                        <h2>Consolas</h2>
+                        <div class="lista-de-productos">
 
-            </div>
-            
-            <h2>Juegos</h2>
-         
+                            <% for ( let i=0; i < product.length; i++) { %>
+                                <div class="producto">
+                                    <h3><a href="/products/detail/<%= product[i].id %>">
+                                            <%= product[i].name %>
+                                        </a></h3>
+                                    <img src="../img/<%= product[i].image %>" alt="">
+                                    <p>
+                                        <%= %>
+                                    </p>
+                                </div>
+                                <% } %>
 
-        </section>
+                        </div>
 
-    </main>
+                        <h2>Juegos</h2>
 
-    <!-- Footer -->
-    <%- include ("./partials/footer") %>
-    
-</body>
+
+                    </section>
+
+            </main>
+
+            <!-- Footer -->
+            <%- include ("./partials/footer") %>
+
+    </body>
+
 </html>

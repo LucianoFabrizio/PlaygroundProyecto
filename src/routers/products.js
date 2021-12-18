@@ -22,7 +22,11 @@ router.get('/detail/:id', productsController.detail);
 
 //BUSCAR
 router.get('/search', productsController.search)
+
 // ELIMINAR
 router.delete('/delete/:id', productsController.delete);
+
+// CART
+router.get('/cart', productsController.cart);
 
 module.exports = router;

@@ -14,7 +14,7 @@
 
           <% if (locals.user) { %>
           <div class='r-icons'><a href="/users/<%= locals.user.id %>"> <img src="/img/uploads/<%= locals.user.image %> " alt="Logo" class="usuario"></a>
-            <a href="/cart"> <img src="/img/carrito.png"  alt="Logo" class="carrito"></a>
+            <a href="/products/cart"> <img src="/img/carrito.png"  alt="Logo" class="carrito"></a>
          </div>
            
           <% } else { %>
@@ -26,7 +26,7 @@
 
                <a href="/users/login"> <img src="/img/usuarioLogin.png" alt="ingresar" class="usuario"></a>
 
-               <a href="/cart"> <img src="/img/carrito.png" alt="Logo" class="carrito"></a>
+               <a href="/products/cart"> <img src="/img/carrito.png" alt="Logo" class="carrito"></a>
 
          <% } %> 
       </div>

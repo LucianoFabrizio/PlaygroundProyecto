@@ -9,6 +9,9 @@ const controller = {
             console.log(product);
         });
     },
+    cart: function (req, res) {
+        res.render('product-cart.ejs');
+    },
 
     search: function (req, res) {
         const prodName = req.query.prodSearch;

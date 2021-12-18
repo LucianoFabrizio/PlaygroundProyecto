@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include ("./partials/head") %>
+
+    <body>
+        <!-- Header -->
+        <%- include ("./partials/header") %>
+
+            <main>
+                <!-- Banner -->
+                <%- include ("./partials/banner") %>
+
+                    <section>
+
+                        <h2 id='mi-carrito'>MI CARRITO</h2>
+                        <div id='cuerpo-prod-cart'>
+                            <div class='cart-box'>
+                                <img src='img/placeholder.jpg' alt='imagen-prod' class='img-prod'>
+
+                                <div class='text-prod'>
+                                    <p>SONY <br> PlayStation 5</p>
+                                    <p>Precio: $150000</p>
+
+                                    <form id='cantbar' action="/" method="GET">
+                                        <label for='category'>Cantidad</label>
+                                        <select name='category'>
+                                            <option value='1'>1</option>
+                                            <option value='2'>2</option>
+                                            <option value='3'>3</option>
+                                            <option value='4'>4</option>
+                                            <option value='5'>5</option>
+                                        </select><br>
+                                    </form>
+                                    <p class='subtotal'>Sub Total: $150000</p>
+                                </div>
+
+                                <p class="x-borrar">X</p>
+                            </div>
+
+
+                            <div class='cart-box'>
+                                <img src='img/placeholder.jpg' alt='imagen-prod' class='img-prod'>
+
+                                <div class='text-prod'>
+                                    <p>NINTENDO <br> Nintendo Switch</p>
+                                    <p>Precio: $125000</p>
+
+                                    <form id='cantbar' action="/" method="GET">
+                                        <label for='category'>Cantidad</label>
+                                        <select name='category'>
+                                            <option value='1'>1</option>
+                                            <option value='2'>2</option>
+                                            <option value='3'>3</option>
+                                            <option value='4'>4</option>
+                                            <option value='5'>5</option>
+                                        </select><br>
+                                    </form>
+                                    <p class='subtotal'>Sub Total: $125000</p>
+                                </div>
+                                <p class="x-borrar">X</p>
+                            </div>
+
+
+
+
+
+                            <h4 id='resumen'>Resumen de Compra</h4>
+                            <div id='resumen-compra'>
+                                <div id='prod-name-group'>
+                                    <p class='prods-name'>prod 1</p>
+                                    <p class='prods-name'>prod 2</p>
+                                    <p class='prods-name'>prod 3</p>
+                                    <p class='prods-name'>prod 4</p>
+                                </div>
+                                <div>
+                                    <p>..................................................</p>
+                                    <p>..................................................</p>
+                                    <p>..................................................</p>
+                                    <p>..................................................</p>
+
+                                </div>
+
+                                <div id='prod-price-group'>
+                                    <p class='prods-price'>$111111</p>
+                                    <p class='prods-price'>$111111</p>
+                                    <p class='prods-price'>$111111</p>
+                                    <p class='prods-price'>$111111</p>
+                                </div>
+                            </div>
+                            <div id='total'>TOTAL: $999999</div>
+                        </div>
+
+                        </div>
+                        <h5 id='method-title'>Elige tu método de pago:</h5><br>
+                        <div id=pay>
+                            <form class='payment' action='/' method='GET'>
+                                <label for='visa'><i class="fab fa-cc-visa"></i>
+                                    <input type="radio" name='pay-method' id='visa' value='visa'>
+                                    <label for='mastercard'><i class="fab fa-cc-mastercard"></i></label>
+                                    <input type="radio" name='pay-method' id='mastercard' value='mastercard'>
+                                    <label for='amex'><i class="fab fa-cc-amex"></i></label>
+                                    <input type="radio" name='pay-method' id='amex' value='amex'>
+                                    <br>
+                                    <div id='cart-buttonbox'>
+                                        <button type='reset' class='cart-button'>BORRAR CARRITO</button>
+                                        <button type="submit" class='cart-button'>CONTINUAR</button>
+                                    </div>
+                            </form>
+                        </div>
+
+
+
+                    </section>
+
+            </main>
+
+            <!-- Footer -->
+            <%- include ("./partials/footer") %>
+
+
+    </body>
+
+</html>
