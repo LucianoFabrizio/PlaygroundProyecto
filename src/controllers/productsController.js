@@ -1,9 +1,11 @@
 const db = require('../database/models');
 const { Op } = require('sequelize');
 
+const Products = db.Product;
+
 const controller = {
     list: function (req, res) {
-        db.Product.findAll().then(function (product) {
+        Products.findAll().then(function (product) {
             console.log(product);
         });
     },
@@ -11,7 +13,7 @@ const controller = {
     search: function (req, res) {
         const prodName = req.query.prodSearch;
 
-        db.Product.findAll({
+        Products.findAll({
             where: {
                 name: {
                     [Op.like]: '%' + prodName + '%',
@@ -33,7 +35,7 @@ const controller = {
 
     processCreate: function (req, res) {
         console.log(req.body);
-        db.Product.create({
+        Products.create({
             name: req.body.name,
             image: req.file.filename,
             creation_date: Date.now(),
@@ -51,7 +53,7 @@ const controller = {
     },
 
     edit: function (req, res) {
-        db.Product.findByPk(req.params.id)
+        Products.findByPk(req.params.id)
             .then((product) => {
                 res.render('product-edit.ejs', { product });
             })
@@ -61,7 +63,7 @@ const controller = {
     processEdit: function (req, res) {
         let prodId = req.params.id;
         console.log(req.body);
-        db.Product.update(
+        Products.update(
             {
                 name: req.body.name,
                 image: req.body.image,
@@ -81,10 +83,9 @@ const controller = {
             })
             .catch((error) => res.send(error));
     },
-    delete: function (req, res) {},
 
     detail: function (req, res) {
-        db.Product.findByPk(req.params.id)
+        Products.findByPk(req.params.id)
             .then((product) => {
                 res.render('detail.ejs', { product });
             })
@@ -93,7 +94,7 @@ const controller = {
 
     delete: function (req, res) {
         let productId = req.params.id;
-        Users.destroy({ where: { id: productId }, force: true }) // force: true es para asegurar que se ejecute la acción
+        Products.destroy({ where: { id: productId }, force: true }) // force: true es para asegurar que se ejecute la acción
             .then(() => {
                 return res.redirect('/');
             })
