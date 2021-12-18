@@ -14,15 +14,15 @@ router.get ('/create', productsController.create);
 router.post('/create', upload.single('image'), productsController.processCreate);
 
 // EDITAR
-router.get ('/:id/edit', productsController.edit);
-router.put('/:id/edit', upload.single('image'), productsController.processEdit);
+router.get ('/edit/:id', productsController.edit);
+router.put('/edit/:id', upload.single('image'), productsController.processEdit);
 
 //DETALLE
-router.get('/:id/detail', productsController.detail);
+router.get('/detail/:id', productsController.detail);
 
 //BUSCAR
 router.get('/search', productsController.search)
 // ELIMINAR
-router.delete('/', productsController.delete);
+router.delete('/delete/:id', productsController.delete);
 
 module.exports = router;

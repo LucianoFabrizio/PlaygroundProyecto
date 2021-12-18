@@ -10,7 +10,7 @@
         <!-- Banner -->
         <%- include ("./partials/banner") %>
 
-        <h1 class="titulo-producto"><a href="/products/<%= product.id %>"><%= product.name %></a></h1>
+        <h1 class="titulo-producto"><a href="/products/detail/<%= product.id %>"><%= product.name %></a></h1>
         <img src="../img/uploads/<%= product.image %>" alt="" class="imagen-producto">
         <div class="control-botones">
             <button type="button" class="botones">Agregar al carrito</button>

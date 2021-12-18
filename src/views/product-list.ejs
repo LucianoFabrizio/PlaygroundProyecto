@@ -18,7 +18,7 @@
                 
                 <% for ( let i = 0; i < product.length; i++) { %>
                     <div class="producto">
-                        <h3><a href="/products/<%= product[i].id %>/detail"><%= product[i].name %></a></h3>
+                        <h3><a href="/products/detail/<%= product[i].id %>"><%= product[i].name %></a></h3>
                         <img src="../img/<%= product[i].image %>" alt="">
                         <p><%= %></p>
                     </div>
