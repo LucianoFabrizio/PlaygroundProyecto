@@ -5,9 +5,11 @@ const Products = db.Product;
 
 const controller = {
     list: function (req, res) {
-        Products.findAll().then(function (product) {
-            console.log(product);
-        });
+        Products.findAll()
+            .then((product) => {
+                res.render('product-list.ejs', { product });
+            })
+            .catch((error) => res.redirect('/'));
     },
     cart: function (req, res) {
         res.render('product-cart.ejs');
