@@ -27,7 +27,7 @@ const controller = {
         })
             .then((product) => {
                 console.log(product);
-                res.render('product-list.ejs', { product });
+                res.render('product-search.ejs', { product, prodName });
 
                 // res.redirect('/products/')
             })

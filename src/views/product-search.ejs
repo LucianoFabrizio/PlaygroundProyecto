@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include ("./partials/head") %>
+
+    <body>
+        <!-- Header -->
+        <%- include ("./partials/header") %>
+
+            <main>
+                <!-- Banner -->
+                <%- include ("./partials/banner") %>
+
+                    <section class="productos">
+
+
+                        <h2>Resultados de la busqueda "<%= prodName %>":</h2>
+                        <div class="lista-de-productos">
+
+                            <% for ( let i=0; i < product.length; i++) { %>
+                                <div class="producto">
+                                    <h3><a href="/products/detail/<%= product[i].id %>">
+                                            <%= product[i].name %>
+                                        </a></h3>
+                                    <img src="../img/<%= product[i].image %>" alt="">
+                                    <p>
+                                        <%= %>
+                                    </p>
+                                </div>
+                                <% } %>
+
+                        </div>
+
+
+                    </section>
+
+            </main>
+
+            <!-- Footer -->
+            <%- include ("./partials/footer") %>
+
+    </body>
+
+</html>
