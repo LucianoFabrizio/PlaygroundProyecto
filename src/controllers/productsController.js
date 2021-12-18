@@ -22,7 +22,7 @@ const controller = {
         })
             .then((product) => {
                 console.log(product);
-                res.render('products.ejs', { product });
+                res.render('product-list.ejs', { product });
 
                 // res.redirect('/products/')
             })
@@ -67,7 +67,6 @@ const controller = {
             {
                 name: req.body.name,
                 image: req.body.image,
-                creation_date: Date.now(),
                 modified_date: Date.now(),
                 price: req.body.precio,
                 gallery: req.body.imgProd,
@@ -87,7 +86,7 @@ const controller = {
     detail: function (req, res) {
         Products.findByPk(req.params.id)
             .then((product) => {
-                res.render('detail.ejs', { product });
+                res.render('product-detail.ejs', { product });
             })
             .catch((error) => res.send(error));
     },

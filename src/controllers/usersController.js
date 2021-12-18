@@ -22,13 +22,13 @@ const usersController = {
             .catch((error) => res.send(error));
     },
     register: function (req, res) {
-        res.render('register.ejs');
+        res.render('user-register.ejs');
     },
     create: function (req, res) {
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
-            return res.render('register', {
+            return res.render('user-register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body,
             });
@@ -48,7 +48,7 @@ const usersController = {
     }},
     
     login: function (req, res){
-        res.render('login.ejs')
+        res.render('user-login.ejs')
     },
 
     processLogin: (req, res) => {
@@ -75,7 +75,7 @@ const usersController = {
                     user: e.dataValues
                 })})
             .catch((error => 
-             res.render('login', {
+             res.render('user-login', {
                 errors: {
                     email: {
                         msg: 'las credenciales son invalidas',
