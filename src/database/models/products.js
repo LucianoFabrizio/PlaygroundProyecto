@@ -28,7 +28,7 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        gallery: {
+        description: {
             type: dataTypes.STRING,
         },
         category_id: {

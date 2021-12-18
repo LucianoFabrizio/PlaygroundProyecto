@@ -4,7 +4,19 @@ const productsController = require('../controllers/productsController');
 const path = require('path');
 const userLogged = require('../middlewares/userLogged.js');
 const multer  = require('multer')
-const upload = multer({ dest: 'uploads/' })
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'public/uploads/products')
+    },
+    filename: function (req, file, cb) {
+        let fileName = `${Date.now()}${path.extname(file.originalname)}`;
+		cb(null, fileName);
+    }
+  })
+  
+  const upload = multer({ storage: storage });
+
 
 // LISTAR 
 router.get('/', productsController.list);

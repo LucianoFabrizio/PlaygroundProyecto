@@ -3,11 +3,6 @@ const { Op } = require('sequelize');
 
 const Products = db.Product;
 
-
-            
-
-
-
 const controlador = {
     index: function (req, res) {
         Products.findAll({
@@ -23,7 +18,6 @@ const controlador = {
                 const accessories = products.filter(function (product) {
                     return product.category_id == 3;
                 });
-                console.log(consoles, games);
                 res.render('index.ejs', { consoles, games, accessories });
             })
             .catch((error) => console.log(error));

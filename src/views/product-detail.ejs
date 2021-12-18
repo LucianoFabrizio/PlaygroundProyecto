@@ -11,21 +11,14 @@
         <%- include ("./partials/banner") %>
 
         <h1 class="titulo-producto"><a href="/products/detail/<%= product.id %>"><%= product.name %></a></h1>
-        <img src="../img/uploads/<%= product.image %>" alt="" class="imagen-producto">
+        <img src="/uploads/products/<%= product.image %>" alt="" class="imagen-producto">
         <div class="control-botones">
             <button type="button" class="botones">Agregar al carrito</button>
             <button type="button" class="botones">Comprar ahora</button>
             <a href="/products/edit/<%= product.id %>" class="botones">EDITAR PRODUCTO</a>
         </div>
-        <h3 class="descripcion-corta"><%= product.description %></h3>
-        <div class="galeria-imagenes">
-            <img src="img/ps5-product.jpg" alt="" class="imagen-galeria">
-            <img src="img/ps5-auriculares.jpg" alt="" class="imagen-galeria">
-            <img src="img/ps5-controller.jpg" alt="" class="imagen-galeria">
-            <img src="img/ps5-banner.jpg" alt="" class="imagen-galeria">
-        </div>
         <section class="descripcion">
-            <p>Descipción: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat incidunt harum, odit, temporibus assumenda quidem, obcaecati amet debitis iusto eveniet illum minus. In expedita illum nobis eligendi accusamus iste. Cupiditate?</p>
+            <p><%= product.description %></p>
         </section>
         <section class="especificaciones">
             <h3>Especificaciones:</h3>
