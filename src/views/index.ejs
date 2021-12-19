@@ -32,7 +32,7 @@
                 
                 <% games.forEach(function(product){ %>
                     <div class="producto">
-                        <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
+                        <h3><a href="/products/detail/<%= product.id %>"><%= product.name %></a></h3>
                         <img src="../uploads/products/<%= product.image %>" alt="">
                         <p><%= product.descripcion %></p>
                     </div>
@@ -45,7 +45,7 @@
                 
                 <% accessories.forEach(function(product){ %>
                     <div class="producto">
-                        <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
+                        <h3><a href="/products/detail/<%= product.id %>"><%= product.name %></a></h3>
                         <img src="../uploads/products/<%= product.image %>" alt="">
                         <p><%= product.descripcion %></p>
                     </div>
