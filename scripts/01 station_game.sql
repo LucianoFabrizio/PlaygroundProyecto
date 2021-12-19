@@ -9,7 +9,7 @@ CREATE TABLE `products` (
    `modified_date` DATETIME,
    `deletion_date` DATETIME,
    `price` INT NOT NULL,
-   `gallery` VARCHAR(255),
+   `description` VARCHAR(255),
    `category_id` INT NOT NULL,
    `brand_id` INT NOT NULL,
    PRIMARY KEY (`id`)

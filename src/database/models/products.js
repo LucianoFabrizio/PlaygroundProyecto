@@ -29,7 +29,7 @@ module.exports = function(sequelize, dataTypes) {
             allowNull: false
         },
         description: {
-            type: dataTypes.STRING,
+            type: dataTypes.TEXT,
         },
         category_id: {
             type: dataTypes.INTEGER,

@@ -108,6 +108,7 @@ main {
 .producto {
     border: grey 1px solid;
     margin: 10px;
+    min-width: 150px;
     max-width: 200px;
 }
 .producto img {
