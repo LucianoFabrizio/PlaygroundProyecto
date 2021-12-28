@@ -26,7 +26,7 @@ const usersController = {
     },
     create: function (req, res) {
         const resultValidation = validationResult(req);
-
+        console.log(resultValidation)
         if (resultValidation.errors.length > 0) {
             return res.render('user-register', {
                 errors: resultValidation.mapped(),

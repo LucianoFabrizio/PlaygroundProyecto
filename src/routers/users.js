@@ -13,9 +13,9 @@ const validationsRegistro = [
     .withMessage('El usuario debe tener al menos 2 caracteres'),
 
 
-    body('mail')
+    body('email')
     .notEmpty()
-    .withMessage('Tienes que escribir un mail'),
+    .withMessage('Tienes que escribir un email'),
 
     body('password')
     .notEmpty()
@@ -27,10 +27,8 @@ const validationsRegistro = [
        // .matches('password2').withMessage('Tienes que escribir la misma contraseña en los dos campos'),
     body('password2')
         .notEmpty()
-        .withMessage('Tienes que escribir una contraseña'),
-        body('password2')
-        .isLength({ min: 8 })
-       .withMessage('La contraseña debe tener al menos 8 caracteres')
+        .withMessage('Tienes que escribir una contraseña')
+  
         .custom((value, { req }) => {
             if (value !== req.body.password) {
                 throw new Error(
@@ -56,7 +54,7 @@ router.get('/list', usersController.list);
 
 router.get('/detail/:id', usersController.detail);
 
-router.get('/register', usersController.register);
+router.get('/register', validationsRegistro, usersController.register);
 
 router.post('/create', validationsRegistro, usersController.create);
 

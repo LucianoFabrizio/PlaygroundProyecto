@@ -4,6 +4,7 @@ const productsController = require('../controllers/productsController');
 const path = require('path');
 const userLogged = require('../middlewares/userLogged.js');
 const multer  = require('multer')
+const { body } = require('express-validator');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -17,17 +18,53 @@ const storage = multer.diskStorage({
   
   const upload = multer({ storage: storage });
 
+const validationProd = [
+    body('name')
+    .notEmpty()
+    .withMessage('Tienes que escribir un nombre.')
+    .isLength({ min: 5 })
+    .withMessage('Debe tener al menos 5 caracteres.'),
+
+    body('description')
+    .notEmpty()
+    .withMessage('Tienes que escribir una descripción.')
+    .isLength({ min: 20 }),
+
+    body('image')
+    .notEmpty()
+    .withMessage('Tienes que subir una imagen.')
+    .custom( function(value, filename) {
+
+      var extension = (path.extname(filename)).toLowerCase();
+      switch (extension) {
+          case '.jpg':
+              return '.jpg';
+          case '.jpeg':
+              return '.jpeg';
+          case  '.png':
+              return '.png';
+          case '.gif':
+          default:
+            throw new Error ('la extensión del archivo es incorrecta.')
+            
+      }
+  }
+)
+]
+
+
+
 
 // LISTAR 
 router.get('/', productsController.list);
 
 // CREAR
 router.get ('/create', productsController.create);
-router.post('/create', upload.single('image'), productsController.processCreate);
+router.post('/create', upload.single('image'), validationProd, productsController.processCreate);
 
 // EDITAR
 router.get ('/edit/:id', productsController.edit);
-router.put('/edit/:id', upload.single('image'), productsController.processEdit);
+router.put('/edit/:id', upload.single('image'), validationProd, productsController.processEdit);
 
 //DETALLE
 router.get('/detail/:id', productsController.detail);

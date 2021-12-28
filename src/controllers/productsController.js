@@ -1,5 +1,7 @@
 const db = require('../database/models');
 const { Op } = require('sequelize');
+const { validationResult } = require('express-validator');
+
 
 const Products = db.Product;
 
@@ -40,6 +42,14 @@ const controller = {
 
     processCreate: function (req, res) {
         console.log(req.body);
+        const resultValidation = validationResult(req);
+        console.log(resultValidation)
+        if (resultValidation.errors.length > 0) {
+            return res.render('product-create', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+            });
+        } else { 
         Products.create({
             name: req.body.name,
             image: req.file.filename,
@@ -56,7 +66,7 @@ const controller = {
                 return res.redirect('/');
             })
             .catch((error) => res.send(error));
-    },
+    }},
 
     edit: function (req, res) {
         Products.findByPk(req.params.id)
