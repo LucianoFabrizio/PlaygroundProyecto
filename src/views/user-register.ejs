@@ -27,7 +27,7 @@
         <form action="/users/create" method="POST" class="formulario">
             <h3>Crear nuevo usuario</h3>
             <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" value="<%= locals.oldData ? oldData.name : null  %>">
+            <input type="text" id="name" name="name" class="name" value="<%= locals.oldData ? oldData.name : null  %>">
 
             <% if (locals.errors && errors.name) { %>
              <div class='text-danger'>
@@ -76,6 +76,7 @@
         <%- include ("./partials/footer") %>
     </footer>
 
+    <script src="/js/userValidation.js"></script>
 </body>
 
 </html>

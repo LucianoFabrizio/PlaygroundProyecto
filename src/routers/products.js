@@ -35,7 +35,7 @@ const validationProd = [
     .withMessage('Tienes que subir una imagen.')
     .custom( function(value, filename) {
 
-      var extension = (path.extname(filename)).toLowerCase();
+      let extension = (path.extname(filename)).toLowerCase();
       switch (extension) {
           case '.jpg':
               return '.jpg';
