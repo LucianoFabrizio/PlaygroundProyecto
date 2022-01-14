@@ -1,6 +1,6 @@
 const db = require('../../database/models');
 const Products = db.Product;
-
+const path = require('path');
 
 const controller = {
     list: (req,res) => {
@@ -54,7 +54,34 @@ const controller = {
 
 
     detail: (req,res) => {
-
+        
+        Products.findByPk(req.params.id)
+        .then((product) => {
+           
+            let apiProduct = {
+                id: product.id,
+                name: product.name,
+                image:  product.image,
+                "creation-date": product.creation_date,
+                "modified-date": product.modified_date,
+                price: product.price,
+                description: product.description,
+                relations: [ {categories: {
+                    consola: 1,
+                    juego: 2,
+                    accesorio: 3
+                }}, { brands: {
+                    Sony: 1,
+                    Nintendo: 2,
+                    Microsoft: 3
+                }
+                } ],
+                category_id: product.category_id,
+                brand_id: product.brand_id
+            }
+           return res.json(apiProduct)
+        })
+      
     }
 }
 
