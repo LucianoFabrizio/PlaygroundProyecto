@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const usersController = require('../controllers/usersController');
 const { body } = require('express-validator');
-
+const userAuth = require('../middlewares/userAuth')
 const validationsRegistro = [
     body('name')
     .notEmpty().
@@ -62,12 +62,12 @@ router.get('/login', usersController.login)
 
 router.post('/login', validationsLogin, usersController.processLogin)
 
-router.get('/edit/:id', usersController.edit);
+router.get('/edit/:id', userAuth, usersController.edit);
 
-router.post('/update/:id', usersController.update);
+router.post('/update/:id', userAuth, usersController.update);
 
-router.get('/delete/:id', usersController.delete);
+router.get('/delete/:id', userAuth, usersController.delete);
 
-router.post('/delete/:id', usersController.destroy);
+router.delete('/delete/:id', userAuth, usersController.destroy);
 
 module.exports = router;

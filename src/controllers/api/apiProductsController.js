@@ -5,7 +5,7 @@ const path = require('path');
 const controller = {
     list: (req,res) => {
         
-        let urlProduct = "http://localhost:3000/products/detail/"
+        let urlProduct = "http://localhost:3000/uploads/products/"
         let arrayProducts = [];
         let objectCategories = {
             consola: 0,
@@ -20,7 +20,7 @@ const controller = {
             {
                 id: product.id,
                 name: product.name,
-                image: product.image,
+                image: urlProduct + product.image,
                 description: product.description,
                 price: product.price,
                 relations: ['categories', 'brands'],
@@ -54,14 +54,14 @@ const controller = {
 
 
     detail: (req,res) => {
-        
+        let urlProduct = "http://localhost:3000/uploads/products/"
         Products.findByPk(req.params.id)
         .then((product) => {
            
             let apiProduct = {
                 id: product.id,
                 name: product.name,
-                image:  product.image,
+                image: urlProduct + product.image,
                 "creation-date": product.creation_date,
                 "modified-date": product.modified_date,
                 price: product.price,

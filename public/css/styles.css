@@ -176,6 +176,15 @@ main {
     list-style-type: none;
 }
 
+/* USER LIST */
+
+.lista-usuarios {
+    display: inline-block;
+    box-sizing: border-box;
+    
+}
+
+
 /* USER DETAIL */
 
 .perfil-usuario {

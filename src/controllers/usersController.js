@@ -4,6 +4,7 @@ const sequelize = db.sequelize;
 const { Op, DATE } = require('sequelize');
 const { validationResult } = require('express-validator');
 
+
 const Users = db.User;
 
 const usersController = {
@@ -64,7 +65,7 @@ const usersController = {
           .then((e) => {
           
             console.log(e)
-       
+            req.session.loggedUser = e.dataValues
             // let comparePassbCrypt = bcrypt.compareSync(
             //     req.body.password,
             //     userToLogin.password

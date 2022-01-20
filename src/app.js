@@ -34,10 +34,12 @@ const apiUserRouter = require('./routers/api/apiUsers')
 app.use('/', mainRouter);
 app.use('/products', productRouter);
 app.use('/users', usersRouter);
+
+//  API
 app.use('/api/users', apiUserRouter);
 app.use('/api/products', apiProductRouter);
 
-// app.use(sessionMiddle)
+app.use(sessionMiddle)
 
 app.listen(PORT, () => {
     console.log(`El servidor está corriento en http://localhost:` + PORT);

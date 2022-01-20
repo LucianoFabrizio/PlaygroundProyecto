@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include ("./partials/head") %>
+
+    <body>
+        <!-- Header -->
+        <%- include ("./partials/header") %>
+
+            <main>
+                <!-- Banner -->
+                <%- include ("./partials/banner") %>
+
+                    <section class="productos">
+
+
+                        <h2>Lista de Usuarios</h2>
+                        <div>
+
+                            <% for ( let i=0; i < users.length; i++) { %>
+                                <br >
+                                    <h3 class="lista-usuarios"><a href="/users/detail/<%= users[i].id %>">
+                                            <%= users[i].name %>
+                                        </a></h3>
+                                    </br>
+                                        <%= %>
+
+                                    
+                                <% } %>
+
+                        </div>
+
+
+                    </section>
+
+            </main>
+
+            <!-- Footer -->
+            <%- include ("./partials/footer") %>
+
+    </body>
+
+</html>
