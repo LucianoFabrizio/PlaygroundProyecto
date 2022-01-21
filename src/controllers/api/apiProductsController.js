@@ -8,10 +8,12 @@ const controller = {
         let urlProduct = "http://localhost:3000/uploads/products/"
         let arrayProducts = [];
         let objectCategories = {
-            consola: 0,
-            juego: 0,
-            accesorio: 0
+            Consola: 0,
+            Juego: 0,
+            Accesorio: 0
         }
+        let categoriesArray = ['Consola', 'Juego', 'Accesorio']
+        let brandsArray = ['Sony', 'Nintendo', 'Microsoft']
     Products.findAll({
         raw: true
     })
@@ -24,7 +26,9 @@ const controller = {
                 description: product.description,
                 price: product.price,
                 relations: ['categories', 'brands'],
-                URL: urlProduct + product.id
+                URL: urlProduct + product.id,
+                category: categoriesArray[product.category_id -1],
+                brand: brandsArray[product.brand_id -1]
             }
         ))
             console.log(e.length)
