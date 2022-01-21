@@ -36,11 +36,11 @@ const controller = {
      
 
             if (e[i].category_id == 1){
-                objectCategories.consola += 1
+                objectCategories.Consola += 1
             } else if (e[i].category_id == 2){
-                objectCategories.juego += 1
+                objectCategories.Juego += 1
             } else if (e[i].category_id == 3){
-                objectCategories.accesorio += 1
+                objectCategories.Accesorio += 1
         }
     }
             let dataProducts = {

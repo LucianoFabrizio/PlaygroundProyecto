@@ -37,3 +37,11 @@ Retro Sexto Sprint:
   3. Continuar haciendo: Cumplir objetivos a tiempo. 
   4. Hacer menos: Comunicación asincrónica.
   5. Dejar de hacer: Dejar todo para el final. 
+    
+  Retro Sexto Sprint: 
+
+  1. Comenzar a hacer: Terminar de pulir las últimas cosas. 
+  2. Hacer más: Nuevamente, comunicación. 
+  3. Continuar haciendo: Puliendo cosas. 
+  4. Hacer menos: Otra vez, comunicación asincrónica.
+  5. Dejar de hacer: Cosas sin mirar como impacta el CSS. 
