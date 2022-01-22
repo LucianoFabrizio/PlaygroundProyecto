@@ -181,9 +181,7 @@ main {
 .lista-usuarios {
     display: inline-block;
     box-sizing: border-box;
-    
 }
-
 
 /* USER DETAIL */
 
@@ -414,4 +412,11 @@ main div form label {
 .text-danger {
     color: red;
     font-size: 0.8rem;
+}
+
+@media (max-width: 480px) {
+    .r-icons {
+        scale: 75%;
+        display: flex;
+    }
 }
