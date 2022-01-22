@@ -45,3 +45,11 @@ Retro Sexto Sprint:
   3. Continuar haciendo: Puliendo cosas. 
   4. Hacer menos: Otra vez, comunicación asincrónica.
   5. Dejar de hacer: Cosas sin mirar como impacta el CSS. 
+
+   Retro Séptimo Sprint: 
+
+  1. Comenzar a hacer: Festejar que terminamos. 
+  2. Hacer más: Buscar laburo de developer. 
+  3. Continuar haciendo: Codear todos los días. 
+  4. Hacer menos: Ver videos de playground.
+  5. Dejar de hacer: Retrospectivas. 
