@@ -60,11 +60,11 @@ router.get('/', productsController.list);
 
 // CREAR
 router.get ('/create', productsController.create);
-router.post('/create', upload.single('image'), validationProd, productsController.processCreate);
+router.post('/create', upload.single('image'), productsController.processCreate);
 
 // EDITAR
 router.get ('/edit/:id', productsController.edit);
-router.put('/edit/:id', upload.single('image'), validationProd, productsController.processEdit);
+router.put('/edit/:id', upload.single('image'), productsController.processEdit);
 
 //DETALLE
 router.get('/detail/:id', productsController.detail);

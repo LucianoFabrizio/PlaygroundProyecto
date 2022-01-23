@@ -78,7 +78,7 @@ const controller = {
 
     processEdit: function (req, res) {
         let prodId = req.params.id;
-        console.log(req.body);
+        console.log('BODY', req.body);
         Products.update(
             {
                 name: req.body.name,
