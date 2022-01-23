@@ -13,6 +13,13 @@ const controller = {
             })
             .catch((error) => res.redirect('/'));
     },
+    admin: function (req, res) {
+        Products.findAll()
+            .then((product) => {
+                res.render('admin-products-list.ejs', { product });
+            })
+            .catch((error) => res.redirect('/'));
+    },
     cart: function (req, res) {
         res.render('product-cart.ejs');
     },
@@ -111,7 +118,7 @@ const controller = {
         let productId = req.params.id;
         Products.destroy({ where: { id: productId }, force: true }) // force: true es para asegurar que se ejecute la acción
             .then(() => {
-                return res.redirect('/');
+                return res.redirect('/products/admin');
             })
             .catch((error) => res.send(error));
     },

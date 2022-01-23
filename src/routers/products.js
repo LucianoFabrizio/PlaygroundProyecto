@@ -5,6 +5,7 @@ const path = require('path');
 const userLogged = require('../middlewares/userLogged.js');
 const multer  = require('multer')
 const { body } = require('express-validator');
+const userAuth = require('../middlewares/userAuth')
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -57,13 +58,16 @@ const validationProd = [
 // LISTAR 
 router.get('/', productsController.list);
 
+// ADMIN 
+router.get('/admin', userAuth, productsController.admin);
+
 // CREAR
-router.get ('/create', productsController.create);
-router.post('/create', upload.single('image'), validationProd, productsController.processCreate);
+router.get ('/create', userAuth, productsController.create);
+router.post('/create', upload.single('image'), /* validationProd, */ productsController.processCreate);
 
 // EDITAR
-router.get ('/edit/:id', productsController.edit);
-router.put('/edit/:id', upload.single('image'), validationProd, productsController.processEdit);
+router.get ('/edit/:id', userAuth, productsController.edit);
+router.put('/edit/:id', upload.single('image'), /* validationProd, */ productsController.processEdit);
 
 //DETALLE
 router.get('/detail/:id', productsController.detail);

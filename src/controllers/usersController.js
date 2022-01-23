@@ -71,15 +71,13 @@ const usersController = {
             //     userToLogin.password
             // );
             // if (comparePassbCrypt) {
-                return res.render('user-detail.ejs',
-                {
-                    user: e.dataValues
-                })})
+                return res.redirect('/')})
+                
             .catch((error => 
              res.render('user-login', {
                 errors: {
                     email: {
-                        msg: 'las credenciales son invalidas',
+                        msg: 'Las credenciales son invalidas',
                     }
                 }
             }) ))

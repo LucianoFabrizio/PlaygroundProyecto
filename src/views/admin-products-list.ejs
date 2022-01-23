@@ -14,7 +14,10 @@
                     <section class="productos">
 
 
-                        <h2>Todos los productos</h2>
+                        <h2>Admin Products</h2>
+
+                        <h3><a href="/products/create/">Crear Producto</a></h3>
+
                         <div class="lista-de-productos">
 
                             <% for ( let i=0; i < product.length; i++) { %>
@@ -23,6 +26,11 @@
                                             <%= product[i].name %>
                                         </a></h3>
                                     <img src="../uploads/products/<%= product[i].image %>" alt="">
+                                    <a href="/products/edit/<%= product[i].id %>" class="botones">EDITAR</a>
+                                    <br>
+                                    <form action="/products/delete/<%= product[i].id %>?_method=DELETE" method="POST">
+                                        <button type="submit" class="botones">ELIMINAR</button>
+                                    </form>
                                 </div>
                                 <% } %>
 
