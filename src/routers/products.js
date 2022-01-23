@@ -21,14 +21,13 @@ const storage = multer.diskStorage({
 const validationProd = [
     body('name')
     .notEmpty()
-    .withMessage('Tienes que escribir un nombre.')
     .isLength({ min: 5 })
-    .withMessage('Debe tener al menos 5 caracteres.'),
+    .withMessage('Tienes que escribir un nombre con al menos 5 caracteres.'),
 
     body('description')
     .notEmpty()
-    .withMessage('Tienes que escribir una descripción.')
-    .isLength({ min: 20 }),
+    .isLength({ min: 20 })
+    .withMessage('Tienes que escribir una descripción con al menos 20 caracteres.'),
 
     body('image')
     .notEmpty()
@@ -45,7 +44,7 @@ const validationProd = [
               return '.png';
           case '.gif':
           default:
-            throw new Error ('la extensión del archivo es incorrecta.')
+            throw new Error ('La extensión del archivo es incorrecta.')
             
       }
   }
@@ -60,11 +59,11 @@ router.get('/', productsController.list);
 
 // CREAR
 router.get ('/create', productsController.create);
-router.post('/create', upload.single('image'), productsController.processCreate);
+router.post('/create', upload.single('image'), validationProd, productsController.processCreate);
 
 // EDITAR
 router.get ('/edit/:id', productsController.edit);
-router.put('/edit/:id', upload.single('image'), productsController.processEdit);
+router.put('/edit/:id', upload.single('image'), validationProd, productsController.processEdit);
 
 //DETALLE
 router.get('/detail/:id', productsController.detail);
