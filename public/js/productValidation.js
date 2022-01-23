@@ -27,6 +27,6 @@ form.addEventListener("submit", (e) => {
         errores.push("la extensión de la imagen debe ser de las siguientes: JPG, PNG, JPEG o GIF")
         alert("la extensión de la imagen debe ser de las siguientes: JPG, PNG, JPEG o GIF")
     }
-    console.log(errores)
+    // console.log(errores)
 })
 }

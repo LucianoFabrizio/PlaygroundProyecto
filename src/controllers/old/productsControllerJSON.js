@@ -69,7 +69,7 @@ const controller = {
             image: image,
         };
 
-        console.log(productToEdit);
+        // console.log(productToEdit);
 
         let newProducts = products.map((product) => {
             if (product.id == productToEdit.id) {

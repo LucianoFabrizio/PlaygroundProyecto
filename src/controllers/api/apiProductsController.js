@@ -31,7 +31,7 @@ const controller = {
                 brand: brandsArray[product.brand_id -1]
             }
         ))
-            console.log(e.length)
+            // console.log(e.length)
         for (let i = 0; i < e.length ; i++){
      
 

@@ -28,7 +28,7 @@ const controller = {
             },
         })
             .then((product) => {
-                console.log(product);
+                // console.log(product);
                 res.render('product-search.ejs', { product, prodName });
 
                 // res.redirect('/products/')
@@ -41,9 +41,9 @@ const controller = {
     },
 
     processCreate: function (req, res) {
-        console.log(req.body);
+        // console.log(req.body);
         const resultValidation = validationResult(req);
-        console.log(resultValidation)
+        // console.log(resultValidation)
         if (resultValidation.errors.length > 0) {
             return res.render('product-create', {
                 errors: resultValidation.mapped(),
@@ -78,7 +78,7 @@ const controller = {
 
     processEdit: function (req, res) {
         let prodId = req.params.id;
-        console.log('BODY', req.body);
+        // console.log('BODY', req.body);
         Products.update(
             {
                 name: req.body.name,

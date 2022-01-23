@@ -27,7 +27,7 @@ const usersController = {
     },
     create: function (req, res) {
         const resultValidation = validationResult(req);
-        console.log(resultValidation)
+        // console.log(resultValidation)
         if (resultValidation.errors.length > 0) {
             return res.render('user-register', {
                 errors: resultValidation.mapped(),
@@ -64,7 +64,7 @@ const usersController = {
         })      
           .then((e) => {
           
-            console.log(e)
+            // console.log(e)
             req.session.loggedUser = e.dataValues
             // let comparePassbCrypt = bcrypt.compareSync(
             //     req.body.password,
