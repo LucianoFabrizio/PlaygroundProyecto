@@ -3,6 +3,7 @@ const router = express.Router();
 const usersController = require('../controllers/usersController');
 const { body } = require('express-validator');
 const userAuth = require('../middlewares/userAuth')
+
 const validationsRegistro = [
     body('name')
     .notEmpty().
@@ -11,7 +12,6 @@ const validationsRegistro = [
     body('name')
     .isLength({ min: 2 })
     .withMessage('El usuario debe tener al menos 2 caracteres'),
-
 
     body('email')
     .notEmpty()

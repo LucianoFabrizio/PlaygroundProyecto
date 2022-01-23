@@ -6,7 +6,7 @@ function authMiddleware(req, res, next) {
         return res.redirect('/users/login');
     } else {
         // Chequear si es administrador
-        if (req.session.loggedUser.admin != true) {
+        if (req.session.loggedUser.admin != 1) {
             // No es administrador
             return res.render('accessDenied');;
         }
