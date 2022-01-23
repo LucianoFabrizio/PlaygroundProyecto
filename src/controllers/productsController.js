@@ -82,13 +82,12 @@ const controller = {
         Products.update(
             {
                 name: req.body.name,
-                image: req.body.image,
+                image: req.file.filename,
                 modified_date: Date.now(),
-                price: req.body.precio,
+                price: req.body.price,
                 description: req.body.description,
-                gallery: req.body.imgProd,
-                category_id: req.body.tipoProd,
-                brand_id: req.body.marca,
+                category_id: req.body.category,
+                brand_id: req.body.brand
             },
             {
                 where: { id: prodId },
