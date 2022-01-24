@@ -22,11 +22,13 @@ const storage = multer.diskStorage({
 const validationProd = [
     body('name')
     .notEmpty()
+    .withMessage('Tienes que escribir un nombre con al menos 5 caracteres.')
     .isLength({ min: 5 })
     .withMessage('Tienes que escribir un nombre con al menos 5 caracteres.'),
 
     body('description')
     .notEmpty()
+    .withMessage('Tienes que escribir una descripción con al menos 20 caracteres.')
     .isLength({ min: 20 })
     .withMessage('Tienes que escribir una descripción con al menos 20 caracteres.'),
 
@@ -63,11 +65,11 @@ router.get('/admin', userAuth, productsController.admin);
 
 // CREAR
 router.get ('/create', userAuth, productsController.create);
-router.post('/create', upload.single('image'), /* validationProd, */ productsController.processCreate);
+router.post('/create',  validationProd, upload.single('image'), productsController.processCreate);
 
 // EDITAR
-router.get ('/edit/:id', userAuth, productsController.edit);
-router.put('/edit/:id', upload.single('image'), /* validationProd, */ productsController.processEdit);
+router.get ('/edit/:id',validationProd, userAuth,  productsController.edit);
+router.put('/edit/:id',  validationProd,  upload.single('image'), productsController.processEdit);
 
 //DETALLE
 router.get('/detail/:id', productsController.detail);

@@ -56,7 +56,7 @@ const usersController = {
         const emailUser = req.body.email;
         const passwordUser = req.body.password;
 
-        const userToLogin = db.User.findOne({
+        db.User.findOne({
             where: {
                 email: emailUser,
                 password: passwordUser

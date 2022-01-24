@@ -86,6 +86,18 @@ const controller = {
     processEdit: function (req, res) {
         let prodId = req.params.id;
         // console.log('BODY', req.body);
+         // console.log(req.body);
+         const resultValidation = validationResult(req);
+         console.log(resultValidation)
+         Products.findByPk(req.params.id)
+         .then((product) => {
+         if (resultValidation.errors.length > 0) {
+             return res.render('product-edit', {
+                 product,
+                 errors: resultValidation.mapped(),
+                 oldData: req.body,
+             });
+            } else { 
         Products.update(
             {
                 name: req.body.name,
@@ -103,7 +115,7 @@ const controller = {
             .then(() => {
                 return res.redirect('/');
             })
-            .catch((error) => res.send(error));
+            .catch((error) => res.send(error));}})
     },
 
     detail: function (req, res) {
