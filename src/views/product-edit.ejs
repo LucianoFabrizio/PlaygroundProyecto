@@ -16,6 +16,12 @@
 
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" value="<%= product.name %>">
+            <% if (locals.errors && errors.name) { %>
+                <div class='text-danger'>
+                   <%= errors.name.msg   %> 
+                </div>
+               <% } %>
+
 
             <label for="brand">Marca:</label>
             <select id="brand" name="brand">
@@ -36,12 +42,22 @@
               <input type="file"
                      id="imgProd" name="image"
                      accept="image/png, image/jpe">
+                     <% if (locals.errors && errors.name) { %>
+                        <div class='text-danger'>
+                           <%= errors.image.msg   %> 
+                        </div>
+                       <% } %>
 
             <label for="price">Precio:</label>
             <input type="number" id="price" name="price" value="<%= product.price %>">
 
             <label for ='description'>Descripción</label>
-            <textarea name="description" rows="10" cols="30" ><%= product.description %></textarea>    
+            <textarea name="description" rows="10" cols="30" ><%= product.description %></textarea>   
+            <% if (locals.errors && errors.name) { %>
+                <div class='text-danger'>
+                   <%= errors.description.msg   %> 
+                </div>
+               <% } %> 
 
             <button id="agregarProd" action="submit">Modificar</button>
             <button id='reiniciarProd'action='reset'>Resetear formulario</button>
