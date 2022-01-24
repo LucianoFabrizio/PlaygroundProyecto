@@ -5,9 +5,6 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 
-
-
-
 const sessionMiddle = require('./middlewares/sessionMiddle')
 
 const PORT = process.env.PORT || 3000;
