@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(session({ secret: 'Session de Station Game' }));
 app.use(methodOverride('_method'));
+app.use(sessionMiddle)
 
 app.set('view engine', 'ejs'); // Define que el motor que utilizamos es EJS
 app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la carpeta de las Vistas
@@ -36,7 +37,6 @@ app.use('/users', usersRouter);
 app.use('/api/users', apiUserRouter);
 app.use('/api/products', apiProductRouter);
 
-app.use(sessionMiddle)
 
 app.listen(PORT, () => {
     console.log(`El servidor está corriento en http://localhost:` + PORT);

@@ -55,6 +55,8 @@ router.get('/list', usersController.list);
 
 router.get('/detail/:id', adminRedirect, usersController.detail);
 
+router.get('/admin/:id', usersController.detail);
+
 router.get('/register', validationsRegistro, usersController.register);
 
 router.post('/create', validationsRegistro, usersController.create);

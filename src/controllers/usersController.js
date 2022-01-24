@@ -22,6 +22,13 @@ const usersController = {
             })
             .catch((error) => res.send(error));
     },
+    admin: (req, res) => {
+        db.User.findByPk(req.params.id)
+            .then((user) => {
+                res.render('admin-detail.ejs', { user });
+            })
+            .catch((error) => res.send(error));
+    },
     register: function (req, res) {
         res.render('user-register.ejs');
     },

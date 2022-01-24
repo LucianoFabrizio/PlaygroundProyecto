@@ -9,8 +9,7 @@ function adminRedirect (req, res, next) {
         } else {
             // Chequear si es administrador
             if (req.session.loggedUser.admin == true) {
-                // No es administrador
-                return res.render('admin-detail');
+                return res.redirect('/users/admin/' + req.session.loggedUser.id);
             }
         }
 

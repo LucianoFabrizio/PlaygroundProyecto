@@ -15,12 +15,10 @@
             <div class='r-icons'>
                <a href="/users/Register"> <img src="/img/usuarioRegister.png" alt="Registro" class="usuario"></a>
                </a>
-
-               <% if (!locals.loggedUser) { %>
+               
+               <% if (locals.loggedUser) { %>
     
-                  <h2>A</h2>
-
-                  <% console.log(locals.loggedUser) %>
+                  <a href="/users/detail/<%= loggedUser.id %>"> <img src="/img/usuarioRegister.png" alt="Registro" class="usuario"></a>
 
                   <% } %>
 
