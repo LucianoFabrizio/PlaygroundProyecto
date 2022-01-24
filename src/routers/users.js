@@ -65,6 +65,8 @@ router.get('/login', usersController.login)
 
 router.post('/login', validationsLogin, usersController.processLogin)
 
+router.get('/logout', usersController.logout)
+
 router.get('/edit/:id', userAuth, usersController.edit);
 
 router.post('/update/:id', userAuth, usersController.update);

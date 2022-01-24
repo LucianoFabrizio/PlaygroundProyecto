@@ -90,6 +90,10 @@ const usersController = {
             }) ))
     },
 
+    logout: function (req,res) {
+        req.session.destroy();
+        res.redirect('/')
+    },
 
     edit: function (req,res) {
         Users.findByPk(req.params.id)

@@ -13,19 +13,23 @@
           </div>
            
             <div class='r-icons'>
-               <a href="/users/Register"> <img src="/img/usuarioRegister.png" alt="Registro" class="usuario"></a>
-               </a>
                
-               <% if (locals.loggedUser) { %>
-    
-                  <a href="/users/detail/<%= loggedUser.id %>"> <img src="/img/usuarioRegister.png" alt="Registro" class="usuario"></a>
+               
+               <% if (!locals.loggedUser) { %>
+
+                  <a href="/users/Register"> <img src="/img/user-plus-solid.svg" alt="Registro" class="usuario"></a>    
+                  
+
+                  <% } else { %>
+
+                     <a href="/users/detail/<%= loggedUser.id %>"> <img src="/img/user-solid.svg" alt="Registro" class="usuario"></a>
+
 
                   <% } %>
 
+               <a href="/users/login"> <img src="/img/sign-in-alt-solid.svg" alt="ingresar" class="usuario"></a>
 
-               <a href="/users/login"> <img src="/img/usuarioLogin.png" alt="ingresar" class="usuario"></a>
-
-               <a href="/products/cart"> <img src="/img/carrito.png" alt="Logo" class="carrito"></a>
+               <!-- <a href="/products/cart"> <img src="/img/carrito.png" alt="Logo" class="carrito"></a> -->  <!-- Borro el acceso carrito mientras no está implementado. -->
 
       </div>
          
