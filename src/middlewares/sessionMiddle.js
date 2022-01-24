@@ -1,5 +1,6 @@
 sessionMiddle = function(req, res, next) {
-    res.locals.user = req.session.user;
+    res.locals.loggedUser = req.session.loggedUser;
+    // console.log(res.locals.loggedUser)
     next();
   };
 

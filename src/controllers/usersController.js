@@ -64,8 +64,8 @@ const usersController = {
         })      
           .then((e) => {
           
-            // console.log(e)
-            req.session.loggedUser = e.dataValues
+              req.session.loggedUser = e.dataValues
+              
             // let comparePassbCrypt = bcrypt.compareSync(
             //     req.body.password,
             //     userToLogin.password
