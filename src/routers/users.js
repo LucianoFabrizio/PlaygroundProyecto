@@ -3,6 +3,7 @@ const router = express.Router();
 const usersController = require('../controllers/usersController');
 const { body } = require('express-validator');
 const userAuth = require('../middlewares/userAuth')
+const adminRedirect = require('../middlewares/adminRedirect')
 
 const validationsRegistro = [
     body('name')
@@ -52,7 +53,7 @@ const validationsLogin = [
 
 router.get('/list', usersController.list);
 
-router.get('/detail/:id', usersController.detail);
+router.get('/detail/:id', adminRedirect, usersController.detail);
 
 router.get('/register', validationsRegistro, usersController.register);
 

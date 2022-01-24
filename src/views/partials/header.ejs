@@ -11,24 +11,18 @@
                <button action="submit">buscar</button>
             </form>
           </div>
-
-          <% if (locals.user) { %>
-          <div class='r-icons'><a href="/users/<%= locals.user.id %>"> <img src="/img/uploads/<%= locals.user.image %> " alt="Logo" class="usuario"></a>
-            <a href="/products/cart"> <img src="/img/carrito.png"  alt="Logo" class="carrito"></a>
-         </div>
            
-          <% } else { %>
-           
-
             <div class='r-icons'>
                <a href="/users/Register"> <img src="/img/usuarioRegister.png" alt="Registro" class="usuario"></a>
+               </a>
+               
+               <a href="/users/detail/<%= user.id %> "> <img src="/img/usuarioDetail.svg" alt="Detalle" class="usuario"></a>
                </a>
 
                <a href="/users/login"> <img src="/img/usuarioLogin.png" alt="ingresar" class="usuario"></a>
 
                <a href="/products/cart"> <img src="/img/carrito.png" alt="Logo" class="carrito"></a>
 
-         <% } %> 
       </div>
          
            
