@@ -41,7 +41,7 @@
               <input type="file"
                      id="imgProd" name="image"
                      accept="image/png, image/jpeg, image/png,">
-                     <% if (locals.errors && errors.name) { %>
+                     <% if (locals.errors && errors.image) { %>
                         <div class='text-danger'>
                            <%= errors.image.msg   %> 
                         </div>
@@ -52,7 +52,7 @@
 
             <label for ='description'>Descripción</label>
             <textarea name="description" id="description" rows="10" cols="30"></textarea>    
-            <% if (locals.errors && errors.name) { %>
+            <% if (locals.errors && errors.description) { %>
                 <div class='text-danger'>
                    <%= errors.description.msg   %> 
                 </div>

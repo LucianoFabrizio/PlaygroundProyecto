@@ -36,7 +36,7 @@ const validationProd = [
             'Tienes que escribir una descripción con al menos 20 caracteres.'
         ),
 
-    body('images').custom((value, { req }) => {
+    body('image').custom((value, { req }) => {
         if (req.file != undefined) {
             let file = req.file;
             let extensionsAllowed = ['.jpeg', '.jpg', '.png', '.gif'];
@@ -48,7 +48,7 @@ const validationProd = [
             }
         }
         return true;
-    }),
+    })
 ];
 
 // LISTAR

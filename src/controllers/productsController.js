@@ -48,9 +48,8 @@ const controller = {
     },
 
     processCreate: function (req, res) {
-        // console.log(req.body);
         const resultValidation = validationResult(req);
-        // console.log(resultValidation)
+        console.log(resultValidation.errors)
         if (resultValidation.errors.length > 0) {
             return res.render('product-create', {
                 errors: resultValidation.mapped(),
