@@ -56,6 +56,13 @@ const controller = {
                 oldData: req.body,
             });
         } else { 
+
+
+            
+            ///// CHEQUIAR IMAGEN
+
+
+
         Products.create({
             name: req.body.name,
             image: req.file.filename,

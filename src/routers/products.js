@@ -36,17 +36,32 @@ const validationProd = [
             'Tienes que escribir una descripción con al menos 20 caracteres.'
         ),
 
+    // body('image').custom((value, { req }) => {
+    //     let file = req.file;
+    //     let extensionsAllowed = ['.jpeg', '.jpg', '.png', '.gif'];
+    //     if (req.file != undefined) {
+    //         let fileExtension = path.extname(file.originalname);
+    //         if (!extensionsAllowed.includes(fileExtension)) {
+    //             throw new Error(
+    //                 'Solo puedes usar archivos ' + extensionsAllowed.join(', ')
+    //             );
+    //         }
+    //     }
+    //     return true;
+    // })
+
     body('image').custom((value, { req }) => {
-        if (req.file != undefined) {
-            let file = req.file;
-            let extensionsAllowed = ['.jpeg', '.jpg', '.png', '.gif'];
+        let file = req.file;
+        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+        if (!file) {
+            throw new Error('Tienes que subir una imagen');
+        } else {
             let fileExtension = path.extname(file.originalname);
-            if (!extensionsAllowed.includes(fileExtension)) {
-                throw new Error(
-                    'Solo puedes usar archivos ' + extensionsAllowed.join(', ')
-                );
+            if (!acceptedExtensions.includes(fileExtension)) {
+                throw new Error(`Las extensiones de archivo permitidas son"  ${acceptedExtensions.join(', ')} `);
             }
         }
+
         return true;
     })
 ];
