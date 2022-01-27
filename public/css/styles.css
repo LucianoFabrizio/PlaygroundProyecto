@@ -12,9 +12,9 @@ main {
 /* HEADER */
 
 .header {
-    background-color: #a4c3b2;
+    background-color: #000;
     width: 100%;
-    height: 50px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,15 +42,23 @@ main {
 }
 
 .barra-busqueda {
-    width: 40%;
-    height: 20px;
+    width: 60%;
+    height: 30px;
     background-color: white;
+    border: none;
+    border-radius: 2px;
+}
+.boton-buscar {
+    border: none;
+    border-radius: 2px;
+    width: 90px;
+    height: 30px;
 }
 .usuario {
     width: auto;
     height: 30px;
     margin-left: auto;
-    margin-right: 5px;
+    margin-right: 15px;
 }
 
 .carrito {
@@ -64,8 +72,8 @@ main {
 .banner {
     display: flex;
     justify-content: space-between;
-    height: 50px;
-    margin: 10px auto;
+    height: 45px;
+    margin: 0px 0px 20px auto;
     border: 1px black solid;
 }
 
@@ -93,6 +101,10 @@ main {
     background-image: '../img/xbox-banner.jpg';
 }
 
+.banner-links {
+    color: black;
+}
+
 /* INDEX */
 
 .productos {
@@ -106,7 +118,8 @@ main {
 }
 
 .producto {
-    border: grey 1px solid;
+    border: black 1px solid;
+    box-shadow: 3px 3px gray;
     margin: 10px;
     min-width: 150px;
     max-width: 200px;
@@ -155,12 +168,13 @@ main {
 .botones {
     padding: 10px;
     margin: 5px;
-    background-color: #cce3de;
+    background-color: #000;
     border: none;
+    color: white;
 }
 
 .botones:hover {
-    background-color: #a4c3b2;
+    background-color: lightslategray;
 }
 
 .botones:active {
@@ -211,8 +225,9 @@ main {
     bottom: 0;
     width: 100%;
     height: 30px;
-    background: #a4c3b2;
+    background: #000;
     font-size: 10px;
+    color: white;
 }
 
 /* PRODUCT-CART */
@@ -418,5 +433,36 @@ main div form label {
     .r-icons {
         scale: 75%;
         display: flex;
+    }
+    .banner-links {
+        font-size: 80%;
+    }
+    .header {
+        background-color: #000;
+        width: 100%;
+        height: 50px;
+    }
+    .banner {
+        height: 35px;
+    }
+    .barra-busqueda {
+        height: 25px;
+    }
+    .boton-buscar {
+        border: none;
+        border-radius: 2px;
+        width: 70px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 390px) {
+    .barra-busqueda {
+        height: 20px;
+        width: 50px;
+    }
+    .boton-buscar {
+        width: 50px;
+        height: 20px;
     }
 }
