@@ -82,7 +82,7 @@ router.post(
 );
 
 // EDITAR
-router.get('/edit/:id', validationProd, userAuth, productsController.edit);
+router.get('/edit/:id', userAuth, productsController.edit);
 router.put(
     '/edit/:id',
     upload.single('image'),
